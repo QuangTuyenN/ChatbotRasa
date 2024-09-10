@@ -1,0 +1,4 @@
+rasa
+bs4
+googletrans == 3.1.0a0
+wolframalpha == 5.0.0

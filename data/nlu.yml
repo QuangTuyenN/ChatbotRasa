@@ -1,0 +1,1996 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - chào
+    - xin chào
+    - chào bot
+    - có ai ở đó không
+    - tôi cần hỗ trợ
+    - Chào bạn
+    - Chào anh
+    - Chào chị
+    - Chào buổi sáng
+    - Có đó không
+    - Rãnh không
+    - Ê
+    - Hú
+    - chào em
+    - em ơi, cho anh hỏi
+    - bot ơi
+    - cho mình hỏi chút
+    - chao xìn
+    - hey
+    - xin chào bé bot
+    - chào bạn
+    - chà bạn
+    - alo
+    - hii
+    - chào nè
+    - hello there
+    - hi admin
+    - hi admin ạ
+    - alo ad
+    - hê sờ lô
+    - hé lô bà già nghèo khổ
+    - à nhon
+    - konnichiha
+    - dông seo
+    - ê thằng kia
+
+    
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - g9
+    - good night
+    - bye bye
+    - tạm biệt
+    - Hẹn gặp lại
+    - Ngủ ngon
+    - Chúc ngủ ngon
+    - Nói chuyện sau nhé
+    - Tôi sẽ liên hệ sau
+    - tạm biệt em
+    - tạm biệt bot nhá
+    - Biến
+    - no see you again
+    - see ya
+    - xin chào tạm biệt
+    - bai bai
+    - ok bai nha
+    - bai hỷ
+    - bye ad
+    - bye nhá
+    - thế nhé
+    - hẹn gặp lại
+    - nói chuyện sau
+    - chào tạm biệt mọi người
+    - chào tạm biệt bot
+    - tạm biệt bot nhé
+    - bye bot nhé
+    - bai bót nha
+    - bye nhó
+    - bái bai
+    - không cần gì cả
+    - không cần gì
+    - ko cần giúp đỡ gì đâu
+    - không cần đâu
+    - chẳng cần gì cả
+
+
+- intent: car_price
+  examples: |
+    - tôi muốn biết giá xe
+    - giá một số loại xe
+    - tham khảo giá vài loại xe
+    - vài loại xe có giá bao nhiêu
+    - muốn biết giá ô tô
+    - giá ô tô
+    - xe ô tô bán với giá bao nhiêu
+    - giá xe ô tô 
+    - cần mua ô tô nên muốn tham khảo giá
+    - cho tôi biết giá ô tô
+    - loại ô tô công ty lắp ráp giá bao nhiêu
+    - cần biết giá vài em ô tô
+    - tôi muốn mua ô tô nên cần tham khảo giá
+    - giá vài loại ô tô
+    - xế hộp giá bao nhiêu
+    - hỏi giá xe chút ý mà
+    - ý là tôi muốn hỏi giá xe á
+    - công ty bán xe bao nhiêu tiền
+    - giá xe con công ty là bao nhiêu
+    - muốn mua xe con nên cần biết giá
+    - giá xe con
+
+- intent: car_feature
+  examples: |
+    - Tính năng nổi bật của ô tô công ty là gì
+    - Các đặc điểm nổi bật của xe hơi công ty
+    - xe công ty có điểm gì hay ho
+    - Đặc tính nổi bật của xe công ty là gì
+    - Dòng xe ô tô của công ty nổi trội thế nào
+    - Xe trờng hải có gì
+    - Đặc điểm của xe ô tô công ty ra sao
+    - Các tiện ích của xe ô tô công ty
+    - Các chức năng chính xe ô tô công ty như thế nào
+    - Điểm đặc trưng của ô tô công ty là gì
+    - Loại xe ô tô công ty có gì
+    - Khả năng của xe ô tô công ty như thế nào
+    - Xe ô tô công ty có những đặc điểm gì
+    - Các thuộc tính chính của xe hơi công ty
+    - Xe ô tô công ty có những tiện ích gì
+    - Những ưu điểm của xe hơi công ty so với các loại xe khác
+    - Xe công ty có những thuộc tính nổi bật gì
+    - Cho tôi biết tính năng xe công ty
+    - tính năng xe con công ty
+    - cho tôi biết tính năng xe con công ty
+    - bạn có biết tính năng xe con công ty không
+    - cho tôi hỏi giá xe con
+- intent: ask_name_brand_car
+  examples: |
+    - Tôi muốn hỏi giá xe [Mercedes]{"entity": "brand_car"}
+    - Tôi muốn hỏi giá xe [Kia]{"entity": "brand_car"}
+    - Tôi muốn hỏi giá xe [Peugeot]{"entity": "brand_car"}
+    - Tôi muốn hỏi giá xe [Huyndai]{"entity": "brand_car"}
+    - Tôi muốn hỏi giá xe [MINI]{"entity": "brand_car"}
+    - Tôi muốn hỏi giá xe [MINI Cooper]{"entity": "brand_car"}
+    - Tôi đang thắc mắc về giá ô tô hãng [Mercedes]{"entity": "brand_car"}
+    - Tôi đang thắc mắc về giá ô tô hãng [kia]{"entity": "brand_car"}
+    - Tôi đang thắc mắc về giá ô tô hãng [peugeot]{"entity": "brand_car"}
+    - Tôi đang thắc mắc về giá ô tô hãng [Huyndai]{"entity": "brand_car"}
+    - Tôi đang thắc mắc về giá ô tô hãng [mini]{"entity": "brand_car"}
+    - Tôi đang thắc mắc về giá ô tô hãng [mini cooper]{"entity": "brand_car"}
+    - Báo giá cho tôi xe [Mercedes]{"entity": "brand_car"}
+    - Báo giá cho tôi xe [Kia]{"entity": "brand_car"}
+    - Báo giá cho tôi xe [Peugeot]{"entity": "brand_car"}
+    - Báo giá cho tôi xe [Huyndai]{"entity": "brand_car"}
+    - Báo giá cho tôi xe [MINI Cooper]{"entity": "brand_car"}
+    - [Mercedes]{"entity": "brand_car"}
+    - [Kia]{"entity": "brand_car"}
+    - [Peugeot]{"entity": "brand_car"}
+    - [Huyndai]{"entity": "brand_car"}
+    - [MINI Cooper]{"entity": "brand_car"}
+    - báo giá cho tôi vài mẫu ô tô [Mercedes]{"entity": "brand_car"} đi
+    - tôi muốn biết giá vài loại xe ô tô [Kia]{"entity": "brand_car"} để mua
+    - công ty bán ô tô [Peugeot]{"entity": "brand_car"} với giá thế nào
+    - tôi muốn tham khảo giá xe [Huyndai]{"entity": "brand_car"}
+    - tôi muốn biết giá một số loại xe du lịch [MINI]{"entity": "brand_car"} do công ty lắp ráp
+    - vậy tôi muốn hỏi về giá bán một số loại xe [MINI Cooper]{"entity": "brand_car"}
+    - tôi muốn tham khảo giá vài chiếc ô tô [Mercedes]{"entity": "brand_car"}
+    - công ty bán xe [kia]{"entity": "brand_car"} với giá ra làm sao vậy
+    - tôi muốn mua xe hơi [kia]{"entity": "brand_car"} vậy công ty bán với giá thế nào
+    - công ty bán xe [Huyndai]{"entity": "brand_car"} với giá thế nào vậy
+    - [MINI Cooper]{"entity": "brand_car"} ấy
+    - [Mercedes]{"entity": "brand_car"} đó
+    - tôi muốn mua một chiếc xe hơi hiệu [Kia]{"entity": "brand_car"}
+    - giá bán vài mẫu xe ô tô [Peugeot]{"entity": "brand_car"} là nhiêu vậy
+    - báo giá xe hơi [Huyndai]{"entity": "brand_car"}
+    - tôi muốn mua xe ô tô [MINI]{"entity": "brand_car"} vậy bạn có biết giá cả thế nào không
+    - giá xe hơi công ty [Mercedes]{"entity": "brand_car"} thế nào
+
+- intent: ask_current_time
+  examples: |
+    - Mấy giờ rồi
+    - Cho hỏi lúc này là mấy giờ
+    - Hiện tại bây giờ là ngày mấy
+    - Bây giờ là mấy giờ
+    - Thời gian hiện tại
+    - Cho biết thời gian hiện tại
+    - Lúc này là mấy giờ
+    - Hiện tại là mấy giờ
+    - cho hỏi là mấy giờ rồi vậy cà
+    - hôm nay là ngày mấy
+    - cho hỏi lịch hôm nay là ngày mấy vậy
+    - thế có biết lịch hôm nay ko
+    - hôm nay là ngày bao nhiêu
+    - lịch hôm nay thế nào
+    - cho hỏi bữa ni ngày mấy rồi
+    - thế lịch hôm nay ra sao
+    - hôm nay là ngày mấy nhỉ
+    - vậy biết ngày tháng hôm nay ra sao không
+    - coi lịch bữa ni với
+    - ni ngày mấy vậy
+    - coi ngày bữa ni
+    - biết bữa ni ngày mấy không
+    - rứa biết ngày hôm nay là ngầy mấy
+    - what time
+    - cho biết ngày hôm ni đi
+    - lịch hôm nay
+    - bữa ni ngày mấy
+    - hôm nay là ngày mấy v
+    - bữa ni thứ mấy
+    - bữa ni ngày mấy
+    - hôm ni là ngày
+    - mấy giờ rồi vậy cà
+    - hỏi giờ
+    - hỏi ngày
+    - hỏi tháng
+
+- intent: ask_feature_brand_car
+  examples: |
+    - Tính năng nổi bật của [Mercedes]{"entity": "brand_car"} là gì
+    - Các đặc điểm nổi bật của [Mercedes]{"entity": "brand_car"}
+    - [Mercedes]{"entity": "brand_car"} có điểm gì hay ho
+    - Đặc tính nổi bật của xe [Mercedes]{"entity": "brand_car"} là gì
+    - Dòng xe [Mercedes]{"entity": "brand_car"} nổi trội thế nào
+    - Xe [Mercedes]{"entity": "brand_car"} có gì
+    - Đặc điểm của xe ô tô [Mercedes]{"entity": "brand_car"} ra sao
+    - Các tiện ích của xe [Mercedes]{"entity": "brand_car"}
+    - Các chức năng chính [Mercedes]{"entity": "brand_car"} như thế nào
+    - Điểm đặc trưng của [Mercedes]{"entity": "brand_car"} là gì
+    - Loại xe [Mercedes]{"entity": "brand_car"} có gì
+    - Khả năng của xe [Mercedes]{"entity": "brand_car"} như thế nào
+    - Xe [Mercedes]{"entity": "brand_car"} có những đặc điểm gì
+    - Các thuộc tính chính của xe [Mercedes]{"entity": "brand_car"}
+    - Xe [Mercedes]{"entity": "brand_car"} có những tiện ích gì
+    - Những ưu điểm của xe [Mercedes]{"entity": "brand_car"} so với các loại xe khác
+    - Xe [Mercedes]{"entity": "brand_car"} có những thuộc tính nổi bật gì
+    - Tính năng nổi bật của [Kia]{"entity": "brand_car"} là gì
+    - Các đặc điểm nổi bật của [Kia]{"entity": "brand_car"}
+    - [kia]{"entity": "brand_car"} có điểm gì hay ho
+    - Đặc tính nổi bật của xe [Kia]{"entity": "brand_car"} là gì
+    - Dòng xe [kia]{"entity": "brand_car"} nổi trội thế nào
+    - Xe [Kia]{"entity": "brand_car"} có gì
+    - Đặc điểm của xe ô tô [kia]{"entity": "brand_car"} ra sao
+    - Các tiện ích của xe [Kia]{"entity": "brand_car"}
+    - Các chức năng chính [kia]{"entity": "brand_car"} như thế nào
+    - Điểm đặc trưng của [Kia]{"entity": "brand_car"} là gì
+    - Loại xe [kia]{"entity": "brand_car"} có gì
+    - Khả năng của xe [Kia]{"entity": "brand_car"} như thế nào
+    - Xe [kia]{"entity": "brand_car"} có những đặc điểm gì
+    - Các thuộc tính chính của xe [Kia]{"entity": "brand_car"}
+    - Xe [kia]{"entity": "brand_car"} có những tiện ích gì
+    - Những ưu điểm của xe [Kia]{"entity": "brand_car"} so với các loại xe khác
+    - Xe [kia]{"entity": "brand_car"} có những thuộc tính nổi bật gì
+    - Tính năng nổi bật của [Peugeot]{"entity": "brand_car"} là gì
+    - Các đặc điểm nổi bật của [peugeot]{"entity": "brand_car"}
+    - [Peugeot]{"entity": "brand_car"} có điểm gì hay ho
+    - Đặc tính nổi bật của xe [peugeot]{"entity": "brand_car"} là gì
+    - Dòng xe [Peugeot]{"entity": "brand_car"} nổi trội thế nào
+    - Xe [peugeot]{"entity": "brand_car"} có gì
+    - Đặc điểm của xe ô tô [Peugeot]{"entity": "brand_car"} ra sao
+    - Các tiện ích của xe [peugeot]{"entity": "brand_car"}
+    - Các chức năng chính [Peugeot]{"entity": "brand_car"} như thế nào
+    - Điểm đặc trưng của [peugeot]{"entity": "brand_car"} là gì
+    - Loại xe [Peugeot]{"entity": "brand_car"} có gì
+    - Khả năng của xe [peugeot]{"entity": "brand_car"} như thế nào
+    - Xe [Peugeot]{"entity": "brand_car"} có những đặc điểm gì
+    - Các thuộc tính chính của xe [peugeot]{"entity": "brand_car"}
+    - Xe [Peugeot]{"entity": "brand_car"} có những tiện ích gì
+    - Những ưu điểm của xe [peugeot]{"entity": "brand_car"} so với các loại xe khác
+    - Xe [Peugeot]{"entity": "brand_car"} có những thuộc tính nổi bật gì
+    - Tính năng nổi bật của [Huyndai]{"entity": "brand_car"} là gì
+    - Các đặc điểm nổi bật của [Huyndai]{"entity": "brand_car"}
+    - [Huyndai]{"entity": "brand_car"} có điểm gì hay ho
+    - Đặc tính nổi bật của xe [Huyndai]{"entity": "brand_car"} là gì
+    - Dòng xe [Huyndai]{"entity": "brand_car"} nổi trội thế nào
+    - Xe [Huyndai]{"entity": "brand_car"} có gì
+    - Đặc điểm của xe ô tô [Huyndai]{"entity": "brand_car"} ra sao
+    - Các tiện ích của xe [Huyndai]{"entity": "brand_car"}
+    - Các chức năng chính [Huyndai]{"entity": "brand_car"} như thế nào
+    - Điểm đặc trưng của [Huyndai]{"entity": "brand_car"} là gì
+    - Loại xe [Huyndai]{"entity": "brand_car"} có gì
+    - Khả năng của xe [Huyndai]{"entity": "brand_car"} như thế nào
+    - Xe [Huyndai]{"entity": "brand_car"} có những đặc điểm gì
+    - Các thuộc tính chính của xe [Huyndai]{"entity": "brand_car"}
+    - Xe [Huyndai]{"entity": "brand_car"} có những tiện ích gì
+    - Những ưu điểm của xe [Huyndai]{"entity": "brand_car"} so với các loại xe khác
+    - Xe [Huyndai]{"entity": "brand_car"} có những thuộc tính nổi bật gì
+    - Tính năng nổi bật của [MINI Cooper]{"entity": "brand_car"} là gì
+    - Các đặc điểm nổi bật của [mini Cooper]{"entity": "brand_car"}
+    - [MINI Cooper]{"entity": "brand_car"} có điểm gì hay ho
+    - Đặc tính nổi bật của xe [mini Cooper]{"entity": "brand_car"} là gì
+    - Dòng xe [MINI Cooper]{"entity": "brand_car"} nổi trội thế nào
+    - Xe [mini Cooper]{"entity": "brand_car"} có gì
+    - Đặc điểm của xe ô tô [MINI Cooper]{"entity": "brand_car"} ra sao
+    - Các tiện ích của xe [mini Cooper]{"entity": "brand_car"}
+    - Các chức năng chính [MINI Cooper]{"entity": "brand_car"} như thế nào
+    - Điểm đặc trưng của [mini Cooper]{"entity": "brand_car"} là gì
+    - Loại xe [MINI Cooper]{"entity": "brand_car"} có gì
+    - Khả năng của xe [mini Cooper]{"entity": "brand_car"} như thế nào
+    - Xe [MINI Cooper]{"entity": "brand_car"} có những đặc điểm gì
+    - Các thuộc tính chính của xe [mini Cooper]{"entity": "brand_car"}
+    - Xe [MINI Cooper]{"entity": "brand_car"} có những tiện ích gì
+    - Những ưu điểm của xe [mini Cooper]{"entity": "brand_car"} so với các loại xe khác
+    - Xe [MINI cooper]{"entity": "brand_car"} có những thuộc tính nổi bật gì
+- intent: ask_name_version_car
+  examples: |
+    - Tôi muốn hỏi giá xe [Mercedes 2]{"entity": "version_car"}
+    - Tôi muốn biết giá loại xe [Mercedes 2 Sport]{"entity": "version_car"}
+    - giá xe ô tô [Mercedes 3 Sport]{"entity": "version_car"} sport khoảng bao nhiêu nhỉ
+    - báo giá ô tô [Mercedes CX-30]{"entity": "version_car"}
+    - tôi muốn hỏi về giá xe ô tô công ty [Kia Morning]{"entity": "version_car"}
+    - vậy tôi muốn hỏi về giá bán một số loại xe [Kia Soluto]{"entity": "version_car"}
+    - báo giá ô tô [Kia Sonet]{"entity": "version_car"} giúp tôi với
+    - cho tôi tham khảo giá ô tô [Mercedes C300]{"entity": "version_car"}
+    - giá xe ô tô [Peugeot 2008]{"entity": "version_car"} là bao nhiêu
+    - giá bán vài mẫu xe ô tô [Huyndai 3 Series]{"entity": "version_car"} là nhiêu
+    - tôi muốn biết giá ô tô [Huyndai 4 Series Grand Coupe]{"entity": "version_car"}
+    - báo giá xe hơi [Huyndai 4 X4]{"entity": "version_car"} cho tôi với
+    - cho tôi tham khảo giá ô tô [MINI Cooper One 5 Door]{"entity": "version_car"}
+    - giá xe hơi công ty [MINI Cooper Countryman]{"entity": "version_car"} thế nào
+    - ý tôi muốn hỏi giá [Mercedes 3]{"entity": "version_car"} ấy
+    - tôi muốn biết giá [Mercedes 3]{"entity": "version_car"}
+    - hỏi cái giá xe [Mercedes 3]{"entity": "version_car"} bạn
+    - Tôi muốn hỏi giá xe [Mercedes 2]{"entity": "version_car"}
+    - Tôi muốn biết giá loại xe [Mercedes 2 Sport]{"entity": "version_car"}
+    - giá xe ô tô [Mercedes 3]{"entity": "version_car"} sport khoảng bao nhiêu nhỉ
+    - báo giá ô tô [Mercedes 3 Sport]{"entity": "version_car"}
+    - tôi muốn hỏi về giá xe ô tô công ty [Mercedes CX-30]{"entity": "version_car"}
+    - vậy tôi muốn hỏi về giá bán một số loại xe [Mercedes CX-3]{"entity": "version_car"}
+    - báo giá ô tô [Mercedes BT-50]{"entity": "version_car"} giúp tôi với
+    - cho tôi tham khảo giá ô tô [Mercedes C300]{"entity": "version_car"}
+    - giá xe ô tô [Mercedes CX-8]{"entity": "version_car"} là bao nhiêu
+    - giá bán vài mẫu xe ô tô [kia Morning]{"entity": "version_car"} là nhiêu
+    - tôi muốn biết giá ô tô [kia new Morning]{"entity": "version_car"}
+    - báo giá xe hơi [Kia soluto]{"entity": "version_car"} cho tôi với
+    - cho tôi tham khảo giá ô tô [Kia Sonet]{"entity": "version_car"}
+    - giá xe hơi công ty [Kia Carens]{"entity": "version_car"} thế nào
+    - ý tôi muốn hỏi giá [Kia K3]{"entity": "version_car"} ấy
+    - tôi muốn biết giá [Kia K5]{"entity": "version_car"}
+    - hỏi cái giá xe [Kia Sportage]{"entity": "version_car"} bạn
+    - Tôi muốn hỏi giá xe [Kia Sorento]{"entity": "version_car"}
+    - Tôi muốn biết giá loại xe [Kia Carnival]{"entity": "version_car"}
+    - giá xe ô tô [Kia Sorento Hybrid]{"entity": "version_car"} sport khoảng bao nhiêu nhỉ
+    - báo giá ô tô [Peugeot 2008]{"entity": "version_car"}
+    - tôi muốn hỏi về giá xe ô tô công ty [Peugeot 3008]{"entity": "version_car"}
+    - vậy tôi muốn hỏi về giá bán một số loại xe [Peugeot 5008]{"entity": "version_car"}
+    - báo giá ô tô [Peugeot Traveller]{"entity": "version_car"} giúp tôi với
+    - cho tôi tham khảo giá ô tô [Huyndai 3 Series]{"entity": "version_car"}
+    - giá xe ô tô [Huyndai X3]{"entity": "version_car"} là bao nhiêu
+    - giá bán vài mẫu xe ô tô [Huyndai 5 Series]{"entity": "version_car"} là nhiêu
+    - tôi muốn biết giá ô tô [Huyndai 4 Series Grand Coupe]{"entity": "version_car"}
+    - báo giá xe hơi [Huyndai 4 Series Mui Trần]{"entity": "version_car"} cho tôi với
+    - cho tôi tham khảo giá ô tô [Huyndai Z4]{"entity": "version_car"}
+    - giá xe hơi công ty [Huyndai X4]{"entity": "version_car"} thế nào
+    - ý tôi muốn hỏi giá [Huyndai X5]{"entity": "version_car"} ấy
+    - tôi muốn biết giá [Huyndai X6]{"entity": "version_car"}
+    - hỏi cái giá xe [Huyndai 7 Series]{"entity": "version_car"} bạn
+    - Tôi muốn hỏi giá xe [Huyndai X7]{"entity": "version_car"}
+    - Tôi muốn biết giá loại xe [Huyndai 8 Series]{"entity": "version_car"}
+    - giá xe ô tô [Huyndai I7]{"entity": "version_car"} sport khoảng bao nhiêu nhỉ
+    - báo giá ô tô [MINI Cooper One 5 Door]{"entity": "version_car"}
+    - tôi muốn hỏi về giá xe ô tô công ty [MINI Cooper 3 Door]{"entity": "version_car"}
+    - vậy tôi muốn hỏi về giá bán một số loại xe [MINI Cooper Convertible]{"entity": "version_car"}
+    - báo giá ô tô [MINI Cooper Countryman]{"entity": "version_car"} giúp tôi với
+    - cho tôi tham khảo giá ô tô [MINI Cooper Clubman]{"entity": "version_car"}
+    - giá xe ô tô [Mercedes 3 Sport]{"entity": "version_car"} là bao nhiêu
+    - giá bán vài mẫu xe ô tô [Mercedes C200]{"entity": "version_car"} là nhiêu
+    - tôi muốn biết giá ô tô [Mercedes CX3]{"entity": "version_car"}
+    - báo giá xe hơi [Mercedes BT50]{"entity": "version_car"} cho tôi với
+    - cho tôi tham khảo giá ô tô [Mercedes CX5]{"entity": "version_car"}
+    - giá xe hơi công ty [Mercedes C300]{"entity": "version_car"} thế nào
+    - ý tôi muốn hỏi giá [Mercedes C200]{"entity": "version_car"} ấy
+    - tôi muốn biết giá [Mercedes bt50]{"entity": "version_car"}
+    - hỏi cái giá xe [Mercedes cx5]{"entity": "version_car"} bạn   
+    - Tôi muốn hỏi giá xe [Mercedes C300]{"entity": "version_car"}
+    - Tôi muốn biết giá loại xe [2008]{"entity": "version_car"}
+    - giá xe ô tô [3008]{"entity": "version_car"} sport khoảng bao nhiêu nhỉ
+    - báo giá ô tô [5008]{"entity": "version_car"}
+    - tôi muốn hỏi về giá xe ô tô công ty [Traveller]{"entity": "version_car"}
+    - vậy tôi muốn hỏi về giá bán một số loại xe [X3]{"entity": "version_car"}
+    - báo giá ô tô [5 Series]{"entity": "version_car"} giúp tôi với
+    - cho tôi tham khảo giá ô tô [4 Series Grand Coupe]{"entity": "version_car"}
+    - giá xe ô tô [4 Series Mui Trần]{"entity": "version_car"} là bao nhiêu
+    - giá bán vài mẫu xe ô tô [3 Sport]{"entity": "version_car"} là nhiêu
+    - tôi muốn biết giá ô tô [C200]{"entity": "version_car"}
+    - báo giá xe hơi [CX3]{"entity": "version_car"} cho tôi với
+    - cho tôi tham khảo giá ô tô [BT50]{"entity": "version_car"}
+    - giá xe hơi công ty [CX5]{"entity": "version_car"} thế nào
+    - ý tôi muốn hỏi giá [C300]{"entity": "version_car"} ấy
+    - tôi muốn biết giá [C200]{"entity": "version_car"}
+    - hỏi cái giá xe [C300]{"entity": "version_car"} bạn
+
+- intent: ask_feature_version_car
+  examples: |
+    - Tính năng nổi bật của [Mercedes 2]{"entity": "version_car"} là gì
+    - Các đặc điểm nổi bật của [Mercedes 2 Sport]{"entity": "version_car"}
+    - [Mercedes 3]{"entity": "version_car"} có điểm gì hay ho
+    - Đặc tính nổi bật của xe [Mercedes 3 Sport]{"entity": "version_car"} là gì
+    - Dòng xe [Mercedes CX-30]{"entity": "version_car"} nổi trội thế nào
+    - Xe [Mercedes CX-3]{"entity": "version_car"} có gì
+    - Đặc điểm của xe ô tô [Mercedes BT-50]{"entity": "version_car"} ra sao
+    - Các tiện ích của xe [Mercedes C300]{"entity": "version_car"}
+    - Các chức năng chính [Mercedes CX-8]{"entity": "version_car"} như thế nào
+    - Điểm đặc trưng của [kia Morning]{"entity": "version_car"} là gì
+    - Loại xe [kia new Morning]{"entity": "version_car"} có gì
+    - Khả năng của xe [Kia soluto]{"entity": "version_car"} như thế nào
+    - Xe [Kia Sonet]{"entity": "version_car"} có những đặc điểm gì
+    - Các thuộc tính chính của xe [Kia Carens]{"entity": "version_car"}
+    - Xe [Kia K3]{"entity": "version_car"} có những tiện ích gì
+    - Những ưu điểm của xe [Kia K5]{"entity": "version_car"} so với các loại xe khác
+    - Xe [Kia Sportage]{"entity": "version_car"} có những thuộc tính nổi bật gì
+    - Tính năng nổi bật của [Kia Sorento]{"entity": "version_car"} là gì
+    - Các đặc điểm nổi bật của [Kia Carnival]{"entity": "version_car"}
+    - [Kia Sorento Hybrid]{"entity": "version_car"} có điểm gì hay ho
+    - Đặc tính nổi bật của xe [Peugeot 2008]{"entity": "version_car"} là gì
+    - Dòng xe [Peugeot 3008]{"entity": "version_car"} nổi trội thế nào
+    - Xe [Peugeot 5008]{"entity": "version_car"} có gì
+    - Đặc điểm của xe ô tô [Peugeot Traveller]{"entity": "version_car"} ra sao
+    - Các tiện ích của xe [Huyndai 3 Series]{"entity": "version_car"}
+    - Các chức năng chính [Huyndai X3]{"entity": "version_car"} như thế nào
+    - Điểm đặc trưng của [Huyndai 5 Series]{"entity": "version_car"} là gì
+    - Loại xe [Huyndai 4 Series Grand Coupe]{"entity": "version_car"} có gì
+    - Khả năng của xe [Huyndai 4 Series Mui Trần]{"entity": "version_car"} như thế nào
+    - Xe [Huyndai Z4]{"entity": "version_car"} có những đặc điểm gì
+    - Các thuộc tính chính của xe [Kia Carnival]{"entity": "version_car"}
+    - Xe [kia sonet]{"entity": "version_car"} có những tiện ích gì
+    - Những ưu điểm của xe [Kia Sorento]{"entity": "version_car"} so với các loại xe khác
+    - Xe [Huyndai X4]{"entity": "version_car"} có những thuộc tính nổi bật gì
+    - Tính năng nổi bật của [Huyndai X6]{"entity": "version_car"} là gì
+    - Các đặc điểm nổi bật của [Huyndai 7 Series]{"entity": "version_car"}
+    - [Huyndai 8 Series]{"entity": "version_car"} có điểm gì hay ho
+    - Đặc tính nổi bật của xe [Huyndai I7]{"entity": "version_car"} là gì
+    - Dòng xe [MINI Cooper One 5 Door]{"entity": "version_car"} nổi trội thế nào
+    - Xe [MINI Cooper 3 Door]{"entity": "version_car"} có gì
+    - Đặc điểm của xe ô tô [MINI Cooper Convertible]{"entity": "version_car"} ra sao
+    - Các tiện ích của xe [MINI Cooper Countryman]{"entity": "version_car"}
+    - Các chức năng chính [MINI Cooper Clubman]{"entity": "version_car"} như thế nào
+    - Điểm đặc trưng của [Mercedes 3 Sport]{"entity": "version_car"} là gì
+    - Loại xe [Mercedes C200]{"entity": "version_car"} có gì
+    - Khả năng của xe [Mercedes CX3]{"entity": "version_car"} như thế nào
+    - Xe [Mercedes BT50]{"entity": "version_car"} có những đặc điểm gì
+    - Các thuộc tính chính của xe [Mercedes CX5]{"entity": "version_car"}
+    - Xe [Mercedes C300]{"entity": "version_car"} có những tiện ích gì
+    - Những ưu điểm của xe [Mercedes C200]{"entity": "version_car"} so với các loại xe khác
+    - Xe [Mercedes cx3]{"entity": "version_car"} có những thuộc tính nổi bật gì
+    - Tính năng nổi bật của [Mercedes bt50]{"entity": "version_car"} là gì
+    - Các đặc điểm nổi bật của [Mercedes cx5]{"entity": "version_car"}
+    - [Mercedes C300]{"entity": "version_car"} có điểm gì hay ho
+    - Đặc tính nổi bật của xe [2008]{"entity": "version_car"} là gì
+    - Dòng xe [3008]{"entity": "version_car"} nổi trội thế nào
+    - Xe [5008]{"entity": "version_car"} có gì
+    - Đặc điểm của xe ô tô [Traveller]{"entity": "version_car"} ra sao
+    - Các tiện ích của xe [X3]{"entity": "version_car"}
+    - Các chức năng chính [Huyndai X7]{"entity": "version_car"} như thế nào
+    - Điểm đặc trưng của [5 Series]{"entity": "version_car"} là gì
+    - Loại xe [4 Series Grand Coupe]{"entity": "version_car"} có gì
+    - Khả năng của xe [4 Series Mui Trần]{"entity": "version_car"} như thế nào
+    - Xe [Z4]{"entity": "version_car"} có những đặc điểm gì
+    - Các thuộc tính chính của xe [X4]{"entity": "version_car"}
+    - Xe [7 Series]{"entity": "version_car"} có những tiện ích gì
+    - Những ưu điểm của xe [8 Series]{"entity": "version_car"} so với các loại xe khác
+    - Xe [Huyndai I7]{"entity": "version_car"} có những thuộc tính nổi bật gì
+    - Tính năng nổi bật của [I7]{"entity": "version_car"} là gì
+    - Các đặc điểm nổi bật của [One 5 Door]{"entity": "version_car"}
+    - [3 Door]{"entity": "version_car"} có điểm gì hay ho
+    - Đặc tính nổi bật của xe [Convertible]{"entity": "version_car"} là gì
+    - Dòng xe [Countryman]{"entity": "version_car"} nổi trội thế nào
+    - Xe [Clubman]{"entity": "version_car"} có gì
+    - Đặc điểm của xe ô tô [3 Sport]{"entity": "version_car"} ra sao
+    - Các tiện ích của xe [C200]{"entity": "version_car"}
+    - Các chức năng chính [CX3]{"entity": "version_car"} như thế nào
+    - Điểm đặc trưng của [BT50]{"entity": "version_car"} là gì
+    - Loại xe [CX5]{"entity": "version_car"} có gì
+    - Khả năng của xe [C300]{"entity": "version_car"} như thế nào
+    - Xe [C200]{"entity": "version_car"} có những đặc điểm gì
+    - Các thuộc tính chính của xe [cx3]{"entity": "version_car"}
+    - Xe [bt50]{"entity": "version_car"} có những tiện ích gì
+    - Những ưu điểm của xe [cx5]{"entity": "version_car"} so với các loại xe khác
+    - Xe [C300]{"entity": "version_car"} có những thuộc tính nổi bật gì
+- intent: ask_name_another_version_car
+  examples: |
+    - Vậy còn xe [Mercedes 3]{"entity": "version_car"} thì sao
+    - Thế xe [Kia K5]{"entity": "version_car"} ra làm sao
+    - vậy xe [Peugeot 5008]{"entity": "version_car"}
+    - rứa còn [Huyndai 3 Series]{"entity": "version_car"}
+    - [Mercedes 2]{"entity": "version_car"}
+    - [Mercedes 2 Sport]{"entity": "version_car"}
+    - [Mercedes 3]{"entity": "version_car"}
+    - [Mercedes 3 Sport]{"entity": "version_car"}
+    - [Mercedes CX-30]{"entity": "version_car"}
+    - [Mercedes CX-3]{"entity": "version_car"}
+    - [Mercedes BT-50]{"entity": "version_car"}
+    - [Mercedes C300]{"entity": "version_car"}
+    - [Mercedes CX-8]{"entity": "version_car"}
+    - [kia Morning]{"entity": "version_car"}
+    - [kia new Morning]{"entity": "version_car"}
+    - [Kia soluto]{"entity": "version_car"}
+    - [Kia Sonet]{"entity": "version_car"}
+    - [Kia Carens]{"entity": "version_car"}
+    - [Kia K3]{"entity": "version_car"}
+    - [Kia K5]{"entity": "version_car"}
+    - [Kia Sportage]{"entity": "version_car"}
+    - [Kia Sorento]{"entity": "version_car"}
+    - [Kia Carnival]{"entity": "version_car"}
+    - [Kia Sorento Hybrid]{"entity": "version_car"}
+    - [Peugeot 2008]{"entity": "version_car"}
+    - [Peugeot 3008]{"entity": "version_car"}
+    - [Peugeot 5008]{"entity": "version_car"}
+    - [Peugeot Traveller]{"entity": "version_car"}
+    - [Huyndai 3 Series]{"entity": "version_car"}
+    - [Huyndai X3]{"entity": "version_car"}
+    - [Huyndai 5 Series]{"entity": "version_car"}
+    - [Huyndai 4 Series Grand Coupe]{"entity": "version_car"}
+    - [Huyndai 4 Series Mui Trần]{"entity": "version_car"}
+    - [Huyndai Z4]{"entity": "version_car"}
+    - [Huyndai X4]{"entity": "version_car"}
+    - [Huyndai X5]{"entity": "version_car"}
+    - [Huyndai X6]{"entity": "version_car"}
+    - [Huyndai 7 Series]{"entity": "version_car"}
+    - [Huyndai X7]{"entity": "version_car"}
+    - [Huyndai 8 Series]{"entity": "version_car"}
+    - [Huyndai I7]{"entity": "version_car"}
+    - [MINI Cooper One 5 Door]{"entity": "version_car"}
+    - [MINI Cooper 3 Door]{"entity": "version_car"}
+    - [MINI Cooper Convertible]{"entity": "version_car"}
+    - [MINI Cooper Countryman]{"entity": "version_car"}
+    - [MINI Cooper Clubman]{"entity": "version_car"}
+    - [Mercedes 3 Sport]{"entity": "version_car"}
+    - [Mercedes C200]{"entity": "version_car"}
+    - [Mercedes CX3]{"entity": "version_car"}
+    - [Mercedes BT50]{"entity": "version_car"}
+    - [Mercedes CX5]{"entity": "version_car"}
+    - [Mercedes C300]{"entity": "version_car"}
+    - [Mercedes C200]{"entity": "version_car"}
+    - [Mercedes cx3]{"entity": "version_car"}
+    - [Mercedes bt50]{"entity": "version_car"}
+    - [Mercedes cx5]{"entity": "version_car"}
+    - [Mercedes C300]{"entity": "version_car"}
+    - [2008]{"entity": "version_car"}
+    - [3008]{"entity": "version_car"}
+    - [5008]{"entity": "version_car"}
+    - [Traveller]{"entity": "version_car"}
+    - [X3]{"entity": "version_car"}
+    - [5 Series]{"entity": "version_car"}
+    - [4 Series Grand Coupe]{"entity": "version_car"}
+    - [4 Series Mui Trần]{"entity": "version_car"}
+    - [Z4]{"entity": "version_car"}
+    - [X4]{"entity": "version_car"}
+    - [X5]{"entity": "version_car"}
+    - [X6]{"entity": "version_car"}
+    - [7 Series]{"entity": "version_car"}
+    - [X7]{"entity": "version_car"}
+    - [8 Series]{"entity": "version_car"}
+    - [I7]{"entity": "version_car"}
+    - [One 5 Door]{"entity": "version_car"}
+    - [3 Door]{"entity": "version_car"}
+    - [Convertible]{"entity": "version_car"}
+    - [Countryman]{"entity": "version_car"}
+    - [Clubman]{"entity": "version_car"}
+    - [3 Sport]{"entity": "version_car"}
+    - [C200]{"entity": "version_car"}
+    - [CX3]{"entity": "version_car"}
+    - [BT50]{"entity": "version_car"}
+    - [CX5]{"entity": "version_car"}
+    - [C300]{"entity": "version_car"}
+    - [C200]{"entity": "version_car"}
+    - [cx3]{"entity": "version_car"}
+    - [bt50]{"entity": "version_car"}
+    - [cx5]{"entity": "version_car"}
+    - [C300]{"entity": "version_car"}
+
+- intent: ask_another_car
+  examples: |
+    - Vậy còn xe [Mercedes]{"entity": "brand_car"} thì sao
+    - Thế xe [Kia]{"entity": "brand_car"} ra làm sao
+    - vậy xe [Peugeot]{"entity": "brand_car"}
+    - rứa còn [Huyndai]{"entity": "brand_car"}
+    - tôi muốn hỏi [MINI]{"entity": "brand_car"}
+    - Rứa thì đối với xe [MINI Cooper]{"entity": "brand_car"}
+    - [Mercedes]{"entity": "brand_car"} thì sao
+    - còn [Kia]{"entity": "brand_car"}
+    - thế còn [Peugeot]{"entity": "brand_car"}
+    - vậy [Huyndai]{"entity": "brand_car"} thế nào
+    - hỏi tương tự đối với xe [MINI]{"entity": "brand_car"}
+    - còn ô tô [MINI Cooper]{"entity": "brand_car"} thì sao
+
+- intent: ability
+  examples: |
+    - bạn làm được gì
+    - bạn làm được những gì
+    - bạn làm được cái gì
+    - bạn có thể làm những việc gì
+    - bạn làm được việc nào
+    - bạn làm được những việc nào
+    - bạn có thể làm được những việc nào
+    - bạn có những khả năng nào
+    - bạn có những kỹ năng gì
+    - khả năng của bạn là gì
+    - những việc bạn có thể làm
+    - việc bạn có thể làm
+    - hãy nêu những việc bạn có thể làm
+    - hãy nêu những việc bạn làm được
+    - hãy kể tên những việc mà bạn có thể làm
+    - hãy kể tên những tác vụ mà bạn có thể làm
+    - hãy liệt kê những việc mà bạn có thể làm 
+    - hãy liệt những việc mà bạn làm được
+    - nêu khả năng của bạn
+    - hãy show khả năng của bạn
+    - nói xem khả năng của bạn
+    - nói xem bạn làm được gì
+    - nói xem bạn có thể làm những gì nào
+    - nói xem bạn có khả năng gì
+    - có tài cán gì show ra xem
+    - có tài cán gì thì biểu diễn xem
+    - hãy show ra những việc bạn có thể làm
+    - bot làm được gì
+    - bot làm được những gì
+    - bot làm được cái gì
+    - bot có thể làm những việc gì
+    - bot làm được việc nào
+    - bot làm được những việc nào
+    - bot có thể làm được những việc nào
+    - bot có những khả năng nào
+    - bot có những kỹ năng gì
+    - khả năng của bot là gì
+    - những việc bot có thể làm
+    - việc bot có thể làm
+    - hãy nêu những việc bot có thể làm
+    - hãy nêu những việc bot làm được
+    - hãy kể tên những việc mà bot có thể làm
+    - hãy kể tên những tác vụ mà bot có thể làm
+    - hãy liệt kê những việc mà bot có thể làm
+    - hãy liệt những việc mà bot làm được
+    - nêu khả năng của bot
+    - hãy show khả năng của bot
+    - nói xem khả năng của bot
+    - nói xem bot làm được gì
+    - nói xem bot có thể làm những gì nào
+    - nói xem bot có khả năng gì
+    - hãy show ra những việc bot có thể làm
+    - thế mi giúp được những gì
+    - thế mi giúp được tao cái chi
+    - vậy mi giúp được tao cái chi nào
+    - show khả năng của mi đi
+    - biết gì kể ra xem na
+    - rứa mi biết cái chi
+    - mi biết được ai
+    - vậy tóm lại mi biết làm cái chi
+
+- intent: who_made_chatbot
+  examples: |
+    - người tạo ra chatbot này là ai
+    - cho hỏi người tạo ra chatbot này là ai
+    - người tạo ra chatbot này là ai vậy
+    - người tạo ra chatbot này
+    - người lập trình chatbot này
+    - người làm ra con bot này
+    - bé làm ra con bot này
+    - cu làm ra con bot này
+    - thằng người làm ra con bot này 
+    - ai là người tạo ra chatbot này
+    - biết người tạo ra chatbot này là ai không
+    - biết người lập trình chatbot này không
+    - biết người làm ra con bot này ko
+
+- intent: sure
+  examples: |
+    - thật không
+    - thiệt không
+    - chắc chưa
+    - có thật khôn
+    - có thật ko
+    - có thật ko đấy
+    - có thật không đấy
+    - chắc không
+    - really
+    - mày chắc chưa
+    - bot chắc chưa
+    - đã chắc chưa
+    - có chắc chưa
+    - chắc chắn không
+    - sure
+    - đúng không vậy
+    - chắc chưa rứa
+    - có đúng ko rứa
+    - liệu có đúng không
+
+- intent: boring
+  examples: |
+    - bot ngu quá
+    - chán thế
+    - điên à
+    - nói tào lao
+    - ngu
+    - ngu như heo
+    - ngu như bò
+    - khùng
+    - tàn
+    - ngu vờ lờ
+    - chán vl
+    - chán vãi
+    - không hiểu à
+    - não tôm
+    - óc lợn
+    - có thế cũng không biết
+    - có thế cũng xin lỗi
+    - có thể cũng không trả lời được
+    - bưa chè
+    - chán vậy
+    - ngu quá
+    - tầm bậy
+    - tào lao
+    - nói vậy thì chịu
+    - lạy luôn á
+    - vãi cả nồi
+    - nói tào lao kinh
+    - bậy nghen
+    - sai rồi
+    - không đúng
+    - không phải như vậy
+    - đến ạ luôn
+    - không đúng nha
+    - thua
+    - stupid bot
+    - bot gà
+    - bó tay với mày
+    - quá yếu
+    - siêu tệ
+
+- intent: good
+  examples: | 
+    - giỏi đấy
+    - khôn đấy
+    - bot giỏi đấy
+    - bot khôn đấy
+    - được đấy
+    - được của ló 
+    - được quá nhở
+    - được quá nhỉ
+    - ok phết đấy
+    - ok đấy chứ
+    - được lắm
+    - khôn lắm
+    - giỏi lắm
+    - ok đó
+    - ổn áp
+    - ổn áp đấy
+    - tuyệt vời nha
+    - tuyệt vời nè
+    - very good
+    - welldone
+    - xịn luôn
+    - quá dữ
+    - khá đấy
+    - tuyệt lắm
+    - làm tốt lắm
+    - đỉnh của chóp
+    - ghê vc
+    - good job
+    - quá ok
+    - 10 điểm
+    - bravo
+    - siêu
+    - rất tuyệt
+    - quá xịn
+
+- intent: inquiries_about
+  examples: | 
+    - dạ ad cho em hỏi
+    - admin cho em hỏi với
+    - em có chút thắc mắc ạ
+    - em hơi thắc mắc một chút ạ
+    - em có điều muốn hỏi ạ
+    - em có điều cần hỏi ạ
+    - em xin phép hỏi 1 chút ạ
+    - ad cho em hỏi
+    - cho em hỏi 1 chút
+    - Em muốn hỏi ad cái này
+    - mình muốn hỏi cái này
+    - Cho mình hỏi ad cái này
+    - mình có thắc mắc như thế này
+    - ad ơi cho mình hỏi
+    - ad ơi cho mình hỏi 1 chút
+    - admin ơi mình hỏi 1 chút
+    - ad ơi trả lời giúp em
+    - ad ơi trả lời giùm em cái này
+    - ad min ơi trả lời giùm em với
+    - ad trả lời giúp mình 1 chút
+    - giúp với
+    - giúp tôi
+    - help me
+    - cần giúp đỡ
+
+- intent: thanks
+  examples: |
+    - Cám ơn admin ạ
+    - Cám ơn ad
+    - Em xin cảm ơn ạ
+    - Em cảm ơn nhiều ạ
+    - Em cám ơn
+    - Em xin cám ơn ạ
+    - Em cám ơn rất nhiều
+    - Em cảm ơn rất nhiều ạ
+    - Dạ em cảm ơn
+    - Dạ em cám ơn nhiều
+    - Em cảm ơn admin ạ
+    - mình cảm ơn nhiều nhé
+    - okay em cảm ơn ạ
+    - ok em hiểu rồi ạ
+    - oke ad em hiểu rồi
+    - thanks
+    - thanks ad
+    - then kiu admin
+    - ok ạ
+    - ok ad
+    - ok admin
+    - okkkk
+    
+- intent: ask_weather
+  examples: |
+    - dự báo thời tiết ở [Bà Rịa]{"entity": "name_city"}
+    - thời tiết ở ở [Bạc Liêu]{"entity": "name_city"}
+    - trời hôm nay ở [bảo lộc]{"entity": "name_city"} ra sao
+    - hôm nay ở [bắc giang]{"entity": "name_city"} có nắng không
+    - hôm nay ở [Bắc Cạn]{"entity": "name_city"} có mưa không
+    - hôm nay trời ở [Bắc Ninh]{"entity": "name_city"} đẹp không
+    - thời tiết ở [bến tre]{"entity": "name_city"} có ok không
+    - chắc hôm nay trời ở [biên hòa]{"entity": "name_city"} đẹp nhỉ
+    - hôm nay thời tiết ở [Buôn Ma Thuột]{"entity": "name_city"} có đẹp không
+    - trời hôm nay ở [Cà Mau]{"entity": "name_city"} thế nào
+    - tôi muốn biết thời tiết ở [cam ranh]{"entity": "name_city"}
+    - bạn có thể cho biết thời tiết ở [cao bằng]{"entity": "name_city"} hôm nay không
+    - thời tiết ở [Cao Lãnh]{"entity": "name_city"} hôm nay ổn không
+    - chắc thời tiết ở [Cẩm Phả]{"entity": "name_city"} hôm nay sẽ đẹp nhỉ
+    - bạn có chức năng dự báo thời tiết ở [châu đốc]{"entity": "name_city"} không
+    - bạn có nghĩ thời tiết hôm nay ở [Đà Lạt]{"entity": "name_city"} đẹp không
+    - tôi muốn biết thời tiết hôm nay ở [Điện Biên Phủ]{"entity": "name_city"}
+    - hôm nay trời ở [đông hà]{"entity": "name_city"} đẹp nhỉ 
+    - hôm nay chắc trời ở [đồng hới]{"entity": "name_city"} đẹp
+    - trời hôm nay ở [Đồng Xoài]{"entity": "name_city"} chắc đẹp nhỉ
+    - chắc trời hôm nay ở [Hà Giang]{"entity": "name_city"} sẽ đẹp
+    - không biết thời tiết ở [hạ long]{"entity": "name_city"} hôm nay thế nào nhỉ
+    - bạn có biết thời tiết ở [hà tiên]{"entity": "name_city"} hôm nay ra sao không
+    - tôi muốn biết thời tiết ở [Hà Tĩnh]{"entity": "name_city"} hôm nay thế nào
+    - thời tiết ở [Hải Dương]{"entity": "name_city"} hôm nay hợp với việc đi chơi không
+    - khí tượng ở [hòa bình]{"entity": "name_city"} hôm nay ra sao
+    - chắc trời [hội an]{"entity": "name_city"} hôm nay đẹp nhỉ
+    - tôi nghĩ hôm nay trời [Huế]{"entity": "name_city"} sẽ đẹp nhỉ
+    - tôi muốn hỏi bạn thời tiết [Hưng Yên]{"entity": "name_city"} hôm nay
+    - cho tôi biết thời tiết [kon tum]{"entity": "name_city"} hôm nay thế bào
+    - thời tiết [lai châu]{"entity": "name_city"} hôm nay ra làm sao
+    - chắc thời tiết [Lạng Sơn]{"entity": "name_city"} hôm nay đẹp nhỉ
+    - hôm nay thời tiết [Lào Cai]{"entity": "name_city"} chắc đẹp chớ
+    - bạn có nghĩ hôm nay [long xuyên]{"entity": "name_city"} trời đẹp
+    - không biết trời hôm nay [móng cái]{"entity": "name_city"} đẹp không nhỉ
+    - khí tượng [Mỹ Tho]{"entity": "name_city"} hôm nay thế nào
+    - hôm nay nhiệt độ [Nam Định]{"entity": "name_city"} thế nào
+    - hôm nay [nha trang]{"entity": "name_city"} có lạnh không
+    - thời tiết [ninh bình]{"entity": "name_city"} có lạnh không
+    - thời tiết [Phan Rang - Tháp Chàm]{"entity": "name_city"} hôm nay lạnh nhỉ
+    - không biết trời [Phan Thiết]{"entity": "name_city"} hôm nay có nóng không
+    - không biết thời tiết [phủ lý]{"entity": "name_city"} hôm nay lạnh không
+    - chắc khí tượng [phúc yên]{"entity": "name_city"} hôm nay đẹp nhỉ
+    - tôi nghĩ khí tượng [Pleiku]{"entity": "name_city"} hôm nay rất đẹp
+    - theo tôi thì khí tượng [Quảng Ngãi]{"entity": "name_city"} hôm nay đẹp
+    - trời [quy nhơn]{"entity": "name_city"} hôm nay có mưa không
+    - chắc trời [rạch giá]{"entity": "name_city"} hôm nay không mưa nhỉ 
+    - tôi nghĩ trời [Sa đéc]{"entity": "name_city"} hôm nay có mưa chớ
+    - thời tiết [Sầm Sơn]{"entity": "name_city"} hôm nay nắng chói chang hả
+    - tôi nghĩ thời tiết [sóc trăng]{"entity": "name_city"} hôm nay không thuận lợi
+    - thời tiết [sơn la]{"entity": "name_city"} hôm nay mưa âm ỉ hả  
+    - chắc khí tượng [thủ đô]{"entity": "name_city"} hôm nay đẹp nhỉ
+    - tôi nghĩ khí tượng [thủ đô]{"entity": "name_city"} hôm nay rất đẹp
+    - theo tôi thì khí tượng [thủ đô]{"entity": "name_city"} hôm nay đẹp
+    - trời [thủ đô]{"entity": "name_city"} hôm nay có mưa không
+    - chắc trời [thủ đô]{"entity": "name_city"} hôm nay không mưa nhỉ 
+    - tôi nghĩ trời [thủ đô]{"entity": "name_city"} hôm nay có mưa chớ
+    - thời tiết [thủ đô]{"entity": "name_city"} hôm nay nắng chói chang hả
+    - tôi nghĩ thời tiết [thủ đô]{"entity": "name_city"} hôm nay không thuận lợi
+    - thời tiết [thủ đô]{"entity": "name_city"} hôm nay mưa âm ỉ hả
+    
+    
+- intent: ask_another_city
+  examples: |
+    - vậy văn phòng [tổng quản]{"entity": "name_city"} thì sao
+    - thế văn phòng [tổng quản]{"entity": "name_city"} ra sao 
+    - thế còn [Chu Lai]{"entity": "name_city"}
+    - vậy còn [Chu Lai]{"entity": "name_city"}
+    - còn [sài gòn]{"entity": "name_city"} thì sao
+    - rứa còn văn phòng [tổng quản]{"entity": "name_city"}
+    - Vậy còn tỉnh [Trà Vinh]{"entity": "name_city"} thì sao
+    - Thế còn huyện [Núi Thành]{"entity": "name_city"} ra làm sao
+    - vậy thành phố [đà nẵng]{"entity": "name_city"}
+    - rứa còn [tam kỳ]{"entity": "name_city"}
+    - tôi muốn hỏi về tỉnh [Quảng Nam]{"entity": "name_city"}
+    - Rứa thì đối với huyện [Phong Điền]{"entity": "name_city"}
+    - [Sơn La]{"entity": "name_city"} thì sao
+    - còn [Hà Nam]{"entity": "name_city"}
+    - thế còn [Hải Lăng]{"entity": "name_city"}
+    - vậy [Nghĩa Hành]{"entity": "name_city"} thế nào
+    - hỏi tương tự đối với thị xã [la gi]{"entity": "name_city"}
+    - còn thành phố [rạch giá]{"entity": "name_city"} thì sao
+    - Thế thị xã [điện bàn]{"entity": "name_city"} thế nào
+    - thế còn ở [Hà Nội]{"entity": "name_city"}
+    - vậy còn [thủ đô]{"entity": "name_city"} thì sao
+    - thế ở [hà nội]{"entity": "name_city"} ra sao
+    - thế ở [hồ chí minh]{"entity": "name_city"}
+    - thế còn ở tp [Hồ Chí Minh]{"entity": "name_city"}
+    - vậy còn [hồ chí minh]{"entity": "name_city"} thì sao
+    - thế ở tp [hồ chí minh]{"entity": "name_city"} ra sao
+    - rứa còn [hà nội]{"entity": "name_city"}
+    - thế còn ở [Hà Nội]{"entity": "name_city"}
+    - vậy còn [hà nội]{"entity": "name_city"} thì sao
+    - thế ở [thủ đô]{"entity": "name_city"} ra sao
+    - vậy còn [hồ chí minh]{"entity": "name_city"}
+    - thế [Hạ Long]{"entity": "name_city"} thì sao
+    - vậy ở [hạ long]{"entity": "name_city"}
+    - còn ở [hạ long]{"entity": "name_city"}
+    - ở [hà nội]{"entity": "name_city"} đi
+    - ở [hà nội]{"entity": "name_city"}
+    - [hà nội]{"entity": "name_city"}
+    - ở [hồ chí minh]{"entity": "name_city"} đi
+    - ở [hồ chí minh]{"entity": "name_city"}
+    - [hồ chí minh]{"entity": "name_city"}
+    - tại [Hà Nội]{"entity": "name_city"} đi
+    - tại [Hà Nội]{"entity": "name_city"}
+    - [Hà Nội]{"entity": "name_city"}
+    - tại [Hồ Chí Minh]{"entity": "name_city"} đi
+    - tại [Hồ Chí Minh]{"entity": "name_city"}
+    - [Hồ Chí Minh]{"entity": "name_city"}
+    - ở [thủ đô]{"entity": "name_city"}
+    - tại [thủ đô]{"entity": "name_city"}
+    - tỉnh [Bà Rịa Vũng Tàu]{"entity": "name_city"} á
+    - [Hà Nam]{"entity": "name_city"}
+    - mình đang ở [Hải Phòng]{"entity": "name_city"}
+    - [Lào Cai]{"entity": "name_city"}
+    - tỉnh [Điện Biên]{"entity": "name_city"}
+    - ở [Kon Tum]{"entity": "name_city"} á
+    - [Lai Châu]{"entity": "name_city"} bạn
+    - [Sóc trăng]{"entity": "name_city"}
+    - thành phố [Cần Thơ]{"entity": "name_city"}
+    - thành phố [Tuy Hòa]{"entity": "name_city"}
+    - [Thái Bình]{"entity": "name_city"}
+    - [Lai Châu]{"entity": "name_city"}
+    - [Sơn La]{"entity": "name_city"}
+    - tỉnh [Hòa Bình]{"entity": "name_city"}
+    - [Điện Biên]{"entity": "name_city"}
+    - [Lào Cai]{"entity": "name_city"}
+    - [Phú Thọ]{"entity": "name_city"}
+    - [Yên Bái]{"entity": "name_city"}
+    - [Hà Giang]{"entity": "name_city"}
+    - [Bắc Giang]{"entity": "name_city"}
+    - thành phố [Hạ Long]{"entity": "name_city"}
+    - Thành phố [Huế]{"entity": "name_city"}
+    - [Tây Ninh]{"entity": "name_city"} á
+    - [Bình Phước]{"entity": "name_city"} đó
+    - thế còn [Bạc Liêu]{"entity": "name_city"}
+    - [An Giang]{"entity": "name_city"} thì sao
+    - [Bình Thuận]{"entity": "name_city"}
+    - [Cà Mau]{"entity": "name_city"}
+    - [Hậu Giang]{"entity": "name_city"}
+    - [Quảng Nam]{"entity": "name_city"}
+    - [Bến Tre]{"entity": "name_city"}
+    - [Điện Biên]{"entity": "name_city"}
+    - [Đồng Tháp]{"entity": "name_city"}
+    - vậy còn [Đăc Nông]{"entity": "name_city"}
+    - tỉnh [Đăk Lăk]{"entity": "name_city"}
+    - [thủ đô]{"entity": "name_city"}
+    - thế ở [chu lai]{"entity": "name_city"} thì sao
+    - vậy ở [chu lai]{"entity": "name_city"}
+- intent: ask_gold_price
+  examples: |
+    - cho tôi biết giá vàng hôm nay thế nào
+    - cho tôi biết giá vàng hôm nay
+    - giá vàng hôm nay là bao nhiêu nhỉ
+    - dạo thị trường vàng chút đi
+    - tôi muốn biết giá vàng thế nào
+    - cho biết giá vàng đi
+    - bạn biết giá vàng hôm nay là mấy không
+    - bạn biết thị trường vàng hôm nay thế nào không
+    - vàng bạc hôm nay thế nào nhỉ
+    - định mua vài cây vàng đây cho tôi biết giá đi
+    - bạn có biết giá vàng hôm nay chớ 
+    - dạo giá vàng chút đi
+    - thị trường vàng thế nào
+    - tình tình giá vàng hiện tại
+    - thị trường vàng hôm nay có khởi sắc không
+    - bạn biết giá vàng hôm nay chứ
+    - vàng bạc hôm nay giá thế nào nhỉ
+    - không biết thị trường vàng hôm nay thế nào nhỉ 
+    - vàng bạc đá quý hôm nay sao nhỉ
+    - tôi muốn tìm hiểu về giá vàng
+    - tôi muốn tìm hiểu về thị trường vàng bạc đá quý
+    - bạn có biết giá vàng hôm nay thế nào không
+    - tình hình vàng bạc hôm nay thế nào nhỉ
+    - giá vàng hôm nay ra sao vậy
+    - tôi thắc mắc về thị trường vàng thế nào
+    - không biết tình hình vàng bạc thế nào rồi nhỉ
+    - vàng hôm nay có hạ không vậy
+    - vàng trong nước hôm nay có hạ không
+    - vàng trong nước hôm nay có tăng không
+    - không biết giá vàng hôm nay thế nào rồi nhỉ
+    - vàng trong nước hôm nay giảm mạnh hả
+    - không biết vàng trong nước hôm nay thế nào nhỉ
+    - vàng có tăng không đấy
+    - vàng hôm nay chạm đỉnh hả
+    - vàng hôm nay rớt đáy hay sao
+    - chắc vàng giảm mạnh ha
+    - vàng hôm nay tăng chóng mặt à
+    - thị trường vàng chắc sôi nổi lắm
+    - liệu giá vàng hôm nay có tăng
+    - không biết vàng bạc hôm nay thế nào nhỉ
+    - liệu thị trường vàng hôm nay có khởi sắc không vậy
+    - nghe nói vàng hôm nay đạt đỉnh trong năm
+    - cần đỗ vài chỉ vàng nên cần biết giá
+    - tôi có nhu cầu bán vàng nên cần biết giá
+    - giá vàng hôm nay chắc ổn định nhỉ
+    
+- intent: ask_exchange_rate
+  examples: |  
+    - tôi muốn biết tỷ giá ngoại tệ
+    - tỷ giá ngoại tệ hôm nay thế nào
+    - giá ngoại tệ hôm nay ra sao
+    - tôi muốn quy đổi tiền nước ngoài
+    - tôi muốn đổi tiền nước ngoài
+    - giá ngoại tệ hôm nay ra sao nhỉ
+    - đồng ngoại tệ hôm nay ra sao
+    - không biết tỷ giá tiền nước ngoài hôm nay thế nào
+    - cần tham khảo tỷ giá ngoại tệ
+    - tôi chuẩn bị đi du lịch nên cần biết giá ngoại tệ
+    - giá ngoại tệ hôm nay thế nào
+    - tỷ giá ngoại tệ hôm nay ra sao
+    - mệnh giá tiền nước ngoài có biến động gì không
+    - mệnh giá tiền nước ngoài hôm nay ra sao nhỉ
+    - không biết tiền nước ngoài có biến động gì không
+    - tỷ giá hối đoái hôm nay bao nhiêu
+    - tôi muốn biết tỷ giá hối đoái tiền tệ hôm nay
+    - không biết tỷ giá hối đoái hôm nay thế nào vậy
+    - tỷ giá ngoại tệ hôm nay có thay đổi nhiều không
+    - chắc tỷ giá ngoại tệ hôm nay không đổi phải không
+    - tỷ giá hối đoái có thay đổi chi không
+    - tôi muốn biết tỷ giá hối đoái
+    - không biết tỷ giá hối đoái hôm nay thế nào
+    - tôi muốn biết tỷ giá hối đoái hôm nay ra sao
+    - tỷ giá ngoại tệ có gì biến động không
+    - không biết có gì thay đổi ở tỷ giá ngoại tệ hôm nay không
+    - liệu tỷ giá ngoại tệ hôm nay có thay đổi không
+    - vậy tỷ giá ngoại tệ có nhiều biến động không
+    - vậy tỷ giá hối đoái có nhiều biến động không
+    - tôi muốn quy đổi tiền
+    - quy đổi tiền
+    - tỷ giá ngoại tệ
+    - tỷ giá hối đoái
+    - cần quy đổi tiền
+    - không biết tỷ giá ngoại tệ hôm nay thế nào
+    - quy đổi tiền nước ngoài
+    - cần đổi tiền nước ngoài
+    - không biết tỷ giá hối đoái hiện tại ra sao
+    - tôi sắp đi du lịch nên cần tìm hiểu về quy đổi tiền tệ xíu
+    - tôi sắp đi du lịch nên cần biết tỷ giá hối đoái
+    - tỷ giá ngoại tệ thế nào
+    - không biết bạn có chức năng quy đổi tiền không
+    - không biết bạn có chức năng báo cáo tỷ giá ngoại tệ không
+    - không biết bạn có chức năng báo cáo tỷ giá hối đoái không
+    - bạn có thể cho tôi biết tỷ giá ngoại tệ không
+    - bạn có thể cho tôi biết tỷ giá hối đoái không
+    - bạn có thể cho tôi biết giá quy đổi tiền không
+    - giá trị quy đổi tiền tệ có thay đổi gì nhiều không
+    - tôi muốn biết tỷ giá đồng tiền ngoại tệ hôm nay thế nào
+    - không biết tỷ giá hối đoái hôm nay có khác không
+    - tôi muốn biết tỷ giá ngoại tệ hôm nay thế nào
+    - thị trường ngoại tệ có gì biến động không
+    - dạo một vòng thị trường ngoại tệ thử
+    - dạo cho tôi một vòng thị trường ngoại tệ với
+    - không biết thị trường ngoại tệ có chi biến động không vậy
+    - tôi muốn quy đổi giá ngoại tệ
+    - hãy cho tôi biết tỷ giá hối đoái
+    - không biết tình hình ngoại tệ thế nào nhỉ
+    - tỷ giá tiền nước ngoài có gì biến động không
+    - hãy dạo cho tôi tỷ giá tiền nước ngoài
+    - cho tôi biết tỷ giá ngoại tệ với
+    - tôi muốn tham khảo thị trường ngoại tệ
+
+- intent: ask_exchange_rate_country
+  examples: |
+    - giá [Đô la Úc]{"entity": "name_money"} hôm nay thế nào nhỉ
+    - [Đô la Canada]{"entity": "name_money"} hôm nay có giảm không
+    - [Franc Thụy Sĩ]{"entity": "name_money"} hôm nay tăng trưởng thế nào
+    - dạo cho tôi thị trường [Nhân dân tệ Trung Quốc]{"entity": "name_money"} với
+    - thị trường [Krone Đan Mạch]{"entity": "name_money"} có khởi sắc không vậy
+    - không biết giá [Euro]{"entity": "name_money"} bây giờ là bao nhiêu nhỉ
+    - không biết giá [Bảng Anh]{"entity": "name_money"} có khởi sắc không nhỉ
+    - dạo giá [Đô la Hồng Kông]{"entity": "name_money"} cho tôi với
+    - giá [Rupee Ấn Độ]{"entity": "name_money"} hôm nay bao nhiêu
+    - tỷ giá hối đoái [Won Hàn Quốc]{"entity": "name_money"}
+    - [Ringit Malaysia]{"entity": "name_money"}
+    - bạn biết [Krone Na uy]{"entity": "name_money"} có giá bao nhiêu không
+    - cần xem giá [Rúp Nga]{"entity": "name_money"}
+    - giá [Rian Ả Rập Xê Út]{"entity": "name_money"} có biến động gì nhiều không vậy
+    - tôi cần biết giá [Đô la Sing]{"entity": "name_money"}
+    - không biết bạn có quy đổi được giá [Bạt Thái]{"entity": "name_money"} không
+    - giá [Bath Thái]{"entity": "name_money"} là bao nhiêu vậy
+    - vậy bạn biết giá [Đô la Mỹ]{"entity": "name_money"} là mấy chứ
+    - không biết [USD]{"entity": "name_money"} giờ có giá bao nhiêu nhỉ
+    - tôi cần biết giá [Đô]{"entity": "name_money"} á
+    - cho tôi biết giá [Đô la Đài Loan]{"entity": "name_money"}
+    - tôi muốn dạo thị trường [Krona Thụy Điển]{"entity": "name_money"}
+    - [Kíp Lào]{"entity": "name_money"} hôm nay có tăng không
+    - không biết [Riel Campuchia]{"entity": "name_money"} tăng hay giảm vậy
+    - chẳng biết [Đô Úc]{"entity": "name_money"} giá thế nào vậy
+    - tôi cần biết giá [nhân dân tệ]{"entity": "name_money"} ấy
+    - không biết [Nhân dân tệ]{"entity": "name_money"} thế nào nhỉ
+    - [krone]{"entity": "name_money"} có tăng không vậy
+    - [Rupee]{"entity": "name_money"} giá ra sao rồi
+    - [Bảng]{"entity": "name_money"} chắc giảm nhỉ
+    - kinh tế suy sụp kiểu ni vậy [đô la hồng kong]{"entity": "name_money"} thế nào
+    - không biết thị trường [Rian]{"entity": "name_money"} có tăng không
+    - vậy thị trường [Bạc]{"entity": "name_money"} thế nào vậy
+    - không biết đồng [kíp]{"entity": "name_money"} có thay đổi gì nhiều không
+    - không biết đồng [rúp]{"entity": "name_money"} có biến động gì nhiều không
+    - đồng [đô la]{"entity": "name_money"} chắc không thay đổi nhiều đâu nhỉ
+    - không biết [bath]{"entity": "name_money"} hôm nay thế nào nhỉ
+    - vậy bạn có biết [krona]{"entity": "name_money"} hôm nay ra sao không
+    - cho tôi biết đồng [Yên Nhật]{"entity": "name_money"} hôm nay thế nào rồi
+    - bạn có biết đồng [Yên]{"entity": "name_money"} biến động ra sao không
+    - chắc đồng [euro]{"entity": "name_money"} không biến động nhiều nhỉ
+    - [yên]{"entity": "name_money"} ra sao rồi
+    - [rúp nga]{"entity": "name_money"} thế nào rồi
+    - tỷ giá [riel]{"entity": "name_money"} có đổi không vậy
+    - chắc [ringit]{"entity": "name_money"} không tăng đâu phải không
+    - không biết [đô mỹ]{"entity": "name_money"} có tăng không nhỉ
+    - vậy cho tôi hỏi đồng [đô singapore]{"entity": "name_money"} thế nào rồi
+    - giá [usd]{"entity": "name_money"} hôm nay thế nào nhỉ
+    - [usd]{"entity": "name_money"} ấy
+    - [đô singapore]{"entity": "name_money"} á
+    - cần biết [ringit]{"entity": "name_money"} á
+    - 1 [đô la mỹ]{"entity": "name_money"} bằng bao nhiêu tiền Việt
+    - cho hỏi 1 [euro]{"entity": "name_money"} bằng bao nhiêu tiền việt
+    - tỷ giá 1 [Yên Nhật]{"entity": "name_money"} thế nào 
+    - tiền [mỹ]{"entity": "name_money"} thế nào
+    - tiền [úc]{"entity": "name_money"}
+    - tiền [nhân dân tệ]{"entity": "name_money"}
+    - một [đô la]{"entity": "name_money"} bằng bao nhiêu tiền Việt
+    - một [euro]{"entity": "name_money"} bằng bao nhiêu
+    - cho hỏi tỷ giá một [ringgit]{"entity": "name_money"} là
+    - thế giá một tiền [Lào]{"entity": "name_money"} là
+- intent: ask_another_money_exchange
+  examples: |   
+    - Vậy còn tiền [đô singapore]{"entity": "name_money"} thì sao
+    - Thế còn đồng [Yên Nhật]{"entity": "name_money"} ra làm sao
+    - vậy thế tiền [USD]{"entity": "name_money"}
+    - rứa còn [Bảng Anh]{"entity": "name_money"}
+    - tôi muốn hỏi về [rúp nga]{"entity": "name_money"}
+    - Rứa thì đối với [Krona Thụy Điển]{"entity": "name_money"}
+    - [Bạt Thái]{"entity": "name_money"} thì sao
+    - còn [won Hàn]{"entity": "name_money"}
+    - thế còn [Riel Cam]{"entity": "name_money"}
+    - vậy [Kíp Lào]{"entity": "name_money"} thế nào
+    - hỏi tương tự đối với tiền [euro]{"entity": "name_money"}
+    - còn [đô la Sing]{"entity": "name_money"} thì sao
+    - Thế [ringit]{"entity": "name_money"} thế nào
+    - [Bạt Thái]{"entity": "name_money"}
+    - [ringit]{"entity": "name_money"}
+    - [Kíp Lào]{"entity": "name_money"}
+    - [Bảng Anh]{"entity": "name_money"}
+    - [won Hàn]{"entity": "name_money"}
+    - [Won]{"entity": "name_money"}
+    - [Rúp]{"entity": "name_money"}
+    - [Yên Nhật]{"entity": "name_money"}
+    - tiền [úc]{"entity": "name_money"}
+    - [đô la úc]{"entity": "name_money"}
+    - [Đô La Hồng Kông]{"entity": "name_money"}
+    - [Riel Campuchia]{"entity": "name_money"}
+    - [đô Sing]{"entity": "name_money"}
+    - [bảng anh]{"entity": "name_money"}
+    - [euro]{"entity": "name_money"}
+    - [Bạc Thái]{"entity": "name_money"}
+    - [usd]{"entity": "name_money"}
+    - [Krona]{"entity": "name_money"}
+    - 1 [đô Singapor]{"entity": "name_money"}
+    - một [USD]{"entity": "name_money"}
+    - [nhân dân tệ]{"entity": "name_money"}
+    - tiền [Mỹ]{"entity": "name_money"}
+    - tiền [Trung Quốc]{"entity": "name_money"}
+    - tiền [Anh]{"entity": "name_money"}
+    
+    
+- intent: ask_today_news
+  examples: | 
+    - cho tôi biết tin tức thời sự hôm nay
+    - hôm nay có tin tức gì mới không
+    - cho tôi biết một số tin hot trong ngày
+    - hôm nay có tin bài gì hàng đầu
+    - không biết tin tức hôm nay thế nào nhỉ
+    - hôm nay có tin gì hot không
+    - điểm báo hôm nay
+    - tin tức hôm nay
+    - tình hình tin tức hôm nay thế nào
+    - không biết thế giới và trong nước có gì biến động hôm nay không
+    - tin giật gân
+    - báo mới hôm nay
+    - báo mới
+    - điểm báo
+    - báo mạng hôm nay
+    - tình hình báo mạng thế nào
+    - có tin gì nóng hổi không
+    - có tin gì hót hòn họt không
+    - có tin tức gì hay hay không
+    - không biết tin tức hôm nay có chi hot không
+    - điểm tin hôm nay
+    - điểm tin sáng
+    - điểm tin tối
+    - báo mới ngày nay
+    - tin tức hôm nay thế nào
+    - tin báo hôm nay
+    - tin tức nóng hổi
+    - không biết tin tức hôm nay thế nào
+    - tình hình tin tức hôm nay ra sao
+    - hôm nay có giật tít gì mới không
+    - báo mạng hôm nay có giật tít tin nào không
+    - có tin mới gì hôm nay không
+    - không biết hôm nay có tin hót không
+    - mấy báo hôm nay ra tin hót không
+    - mấy tòa soạn hôm nay ra báo mới gì
+    - cần biết vài tin tức hot hôm nay
+    - hôm nay chắc có tin hot nhỉ
+    - chắc hôm nay nhiều tin hot lắm
+    - có tin gì sốt dẻo không
+    - tôi cần biết tin tức
+    - tin tức hôm nay ra sao
+    - có tin gì mới cho hôm nay không
+    - báo hôm nay giật tít những gì
+    - bạn biết báo hôm nay ra sao không
+    - tôi cần biết tin báo hôm nay
+    - báo hôm nay có tít gì mới
+    - báo hôm nay có gì đặc sắc không
+
+- intent: ask_name_car_công ty_sell
+  examples: |
+    - công ty bán xe gì
+    - không biết công ty có những xe gì vậy
+    - bạn có biết công ty có bán xe gì không
+    - tôi thắc mắc là công ty bán xe gì thế
+    - không biết công ty sản xuất xe gì
+    - những loại xe mà công ty bán
+    - cho tôi biết các loại xe mà công ty bán với
+    - tôi cần tìm hiểu những loại xe mà công ty có bán
+    - không biết công ty bán những loại xe nào
+    - công ty bán xe gì
+    - tập đoàn ô tô công ty bán xe loại gì vậy
+    - không biết công ty ô tô công ty bán xe gì
+    - bạn có thể cho tôi biết là công ty bán xe chi không
+    - thế công ty auto bán xe gì
+    - vậy công ty auto có xe gì
+    - cho tôi biết xe mà công ty auto bán
+    - công ty auto có xe gì
+
+- intent: ask_name_position
+  examples: |
+    - Tôi tên là [Nguyễn Văn Nam]{"entity": "position_name"}
+    - Chị tên là [Lê Thị Hoa]{"entity": "position_name"}
+    - Anh tên là [Trần Ngọc Long]{"entity": "position_name"}
+    - Mình tên là [Xuân Phúc]{"entity": "position_name"}
+    - Mình tên [Phát]{"entity": "position_name"}
+    - Em tên [Hà]{"entity": "position_name"} nhé
+    - Huy [Thanh Nam]{"entity": "position_name"}
+    - Gọi mình là [Phụng]{"entity": "position_name"} nha
+    - Tôi tên [Cù Trọng Hoàng]{"entity": "position_name"}
+    - chị tên [Lưu Thế Cúc]{"entity": "position_name"}
+    - anh tên [Đàm Đức]{"entity": "position_name"}
+    - gọi tôi là [Quang]{"entity": "position_name"}
+    - tên là [Bích]{"entity": "position_name"} nhé
+    - [Lê Quôc Tuấn]{"entity": "position_name"} nhé
+    - Mình là [Huy]{"entity": "position_name"} nhé
+    - Mọi người thường gọi mình là [Ly]{"entity": "position_name"}
+    - tên đầy đủ mình là [Đỗ Thành Nguyễn Nguyên]{"entity": "position_name"}
+    - [Đinh Viết Phú]{"entity": "position_name"}
+    - [Thôi]{"entity": "position_name"} là ai
+    - [Đức Thôi]{"entity": "position_name"} là người nào
+    - [Đỗ Thành Nguyễn Nguyên]{"entity": "position_name"} là nhân vật nào
+    - không biết [Đức Duy]{"entity": "position_name"} đang làm gì
+    - thế có biết [Duy]{"entity": "position_name"} không
+    - người nào là [Phương Nam]{"entity": "position_name"}
+    - nhân vật nào là [Hiếu Chiến]{"entity": "position_name"}
+    - bạn có biết [Nguyễn Đình Vũ]{"entity": "position_name"} là ai không
+    - bạn có biết [Thị Hằng]{"entity": "position_name"} là người nào không
+    - thông tin về [Hoàng Phan Vĩnh Phước]{"entity": "position_name"}
+    - cho tôi biết [công hậu]{"entity": "position_name"} là ai
+    - cho tôi biết [đắc quy]{"entity": "position_name"} là người nào
+    - cho tôi biết [Quang Tuyền]{"entity": "position_name"} là nhân vật nào
+    - có phải [Viết Triều Tiên]{"entity": "position_name"} là người nổi tiếng không
+    - [Kim Chi]{"entity": "position_name"} có làm việc ở đây không
+    - liệu [Phan Anh Tú]{"entity": "position_name"} có nắm chức gì trong tập đoàn không
+    - cho tôi hỏi [Nguyễn Quang Bảo]{"entity": "position_name"} là ai với
+    - ai là [Trần Thiện]{"entity": "position_name"}
+    - biết [Võ Xuân Đài]{"entity": "position_name"} không
+    - biết anh [Quang Trường]{"entity": "position_name"} không
+    - biết chị [Thanh Nương]{"entity": "position_name"} không
+    - có biết [Thị Trúc Linh]{"entity": "position_name"} không
+    - có biết [Tất Minh]{"entity": "position_name"} làm gì không
+    - chắc biết [Tuấn Bảo]{"entity": "position_name"} chớ
+    - [Quốc Duy]{"entity": "position_name"} là đứa mô
+    - [Đàm Hiếu Chiến]{"entity": "position_name"} là thằng mô
+    - [Quang Hiệu]{"entity": "position_name"} là con mô
+    - [Tam Quang]{"entity": "position_name"} là ông mô
+    - chắc biết [Tiến Anh]{"entity": "position_name"} chớ
+    - ai là [Lê Hữu Thành]{"entity": "position_name"} thế
+    - chắc bạn biết [văn vinh]{"entity": "position_name"} làm gì hả
+    - thằng [Nam]{"entity": "position_name"}
+    - con [Kim Thanh]{"entity": "position_name"}
+    - cho tôi thông tin về [Văn Thương]{"entity": "position_name"}
+    - [Võ Đức Duy]{"entity": "position_name"}
+    - [Trần Đình Nhẫn]{"entity": "position_name"}
+    - rứa còn [Đức Minh]{"entity": "position_name"}
+    - [Trường Tùng]{"entity": "position_name"}
+    - thế [Văn Sang]{"entity": "position_name"}
+    - rứa biết [Công Minh]{"entity": "position_name"} không
+    - [Phan Anh Tú]{"entity": "position_name"}
+    - [Công Đức]{"entity": "position_name"}
+    - [Văn Hoàng]{"entity": "position_name"}
+    - [đinh viết phú]{"entity": "position_name"}
+    - [thôi]{"entity": "position_name"} là ai
+    - [đức thôi]{"entity": "position_name"} là người nào
+    - [đỗ thành nguyễn nguyên]{"entity": "position_name"} là nhân vật nào
+    - [trương tuấn bảo]{"entity": "position_name"} nắm chức gì vậy
+    - không biết [đức duy]{"entity": "position_name"} đang làm gì
+    - thế có biết [duy]{"entity": "position_name"} không
+    - người nào là [phương nam]{"entity": "position_name"}
+    - nhân vật nào là [hiếu chiến]{"entity": "position_name"}
+    - bạn có biết [nguyễn đình vũ]{"entity": "position_name"} là ai không
+    - bạn có biết [thị hằng]{"entity": "position_name"} là người nào không
+    - thông tin về [hoàng phan vĩnh phước]{"entity": "position_name"}
+    - cho tôi biết [công hậu]{"entity": "position_name"} là ai
+    - cho tôi biết [đắc quy]{"entity": "position_name"} là người nào
+    - cho tôi biết [quang tuyền]{"entity": "position_name"} là nhân vật nào
+    - có phải [viết triều tiên]{"entity": "position_name"} là người nổi tiếng không
+    - [kim chi]{"entity": "position_name"} có làm việc ở đây không
+    - liệu [phan anh tú]{"entity": "position_name"} có nắm chức gì trong tập đoàn không
+    - cho tôi hỏi [nguyễn quang bảo]{"entity": "position_name"} là ai với
+    - ai là [trần thiện]{"entity": "position_name"}
+    - biết [võ xuân đài]{"entity": "position_name"} không
+    - biết anh [quang trường]{"entity": "position_name"} không
+    - biết chị [thanh nương]{"entity": "position_name"} không
+    - có biết [thị trúc linh]{"entity": "position_name"} không
+    - có biết [tất minh]{"entity": "position_name"} làm gì không
+    - chắc biết [tuấn bảo]{"entity": "position_name"} chớ
+    - [quốc duy]{"entity": "position_name"} là đứa mô
+    - [đàm hiếu chiến]{"entity": "position_name"} là thằng mô
+    - [quang hiệu]{"entity": "position_name"} là con mô
+    - [tam quang]{"entity": "position_name"} là ông mô
+    - chắc biết [tiến anh]{"entity": "position_name"} chớ
+    - ai là [lê hữu thành]{"entity": "position_name"} thế
+    - chắc bạn biết [văn vinh]{"entity": "position_name"} làm gì hả
+    - thằng [nam]{"entity": "position_name"}
+    - con [kim thanh]{"entity": "position_name"}
+    - cho tôi thông tin về [văn thương]{"entity": "position_name"}
+    - thế [Văn sang]{"entity": "position_name"}
+    - rứa biết [Công minh]{"entity": "position_name"} không
+    - [Phan anh tú]{"entity": "position_name"}
+    - [Công đức]{"entity": "position_name"}
+    - [Văn hoàng]{"entity": "position_name"}
+
+
+- intent: ask_name_bot
+  examples: |
+    - bạn tên gì
+    - bạn tên chi
+    - tên mi là chi
+    - tên chatbot là chi
+    - rứa bot ni tên chi
+    - không biết nên gọi bạn là gì nhỉ
+    - cho tôi cái tên của bạn đi
+    - vậy tên của bạn là gì
+    - không biết bạn có tên không
+    - vậy tôi nên go bạn là gì
+    - tên của bot là gì vậy
+    - bot có tên không
+    - rứa cho hỏi bạn tên gì
+    - tên mi là chi vậy cà
+    - không biết mi tên chi vậy
+    - vậy cho mình hỏi tên bạn là gì
+    - quý danh của bạn
+    - không biết tên bạn là gì nhỉ
+    - gọi bạn là gì
+    - thế tên bạn là gì thế 
+    - vậy bạn có tên không
+    - cho hỏi xưng hô cậu ra sao
+    - xưng hô thế nào nhỉ
+    - rứa nên gọi bot là chi
+    - Chatty là cái chi rứa
+    - tên bạn là Chatty hả
+    - Chatty gì ở đây vậy
+    - Chatty là ren hề
+
+- intent: ask_health_bot
+  examples: |
+    - bạn có khỏe không
+    - khỏe không rứa mi
+    - sức khỏe dạo này thế nào
+    - dạo này ổn chứ
+    - ổn không
+    - thấy bạn không khỏe
+    - sức khỏe dạo này ổn không
+    - chắc bạn mệt lắm nhỉ
+    - không biết dạo này bot thế nào
+    - dạo này ren bạn
+    - thế sức khỏe vẫn ổn chứ
+    - how are you
+    - sức khỏe của bạn thế nào
+    - ổn chứ 
+    - chắc bot dạo ni khỏe ra hen
+    - không biết bạn có khỏe không
+    - dạo này bạn ổn chứ
+    - thế tình hình sức khỏe bot thế nào rồi
+    - chắc bạn ổn chứ
+    - tôi nghĩ là bạn ổn nhỉ
+    - vẫn mạnh khỏe chứ
+    - chắc ổn nhỉ
+
+- intent: ask_complain_health
+  examples: |
+    - dạo này hơi mệt
+    - sức khỏe dạo này đi xuống quá
+    - sức khỏe dạo này không tốt chút mô
+    - dạo này hay đau đầu quá
+    - không khỏe khắp người
+    - cảm thấy bất ổn về sức khỏe
+    - cảm thấy hơi mệt trong người
+    - dạo này nhức đầu quá
+    - dạo này đau vai quá
+    - dạo này mỏi cổ quá
+    - sức khỏe kém đi quá
+    - sức khỏe không được như lúc trước
+    - mệt mỏi quá đi bạn ơi
+    - trong người hơi mệt mỏi
+    - sức khỏe không tốt tí mô
+    - thật mệt mỏi trong người
+    - tôi cảm thấy hơi mệt 
+    - sức khỏe không được tốt
+    - dạo ni hay stress quá
+    - stress nặng luôn á
+    - mệt mỏi kinh
+    - sức khỏe dạo ni xuống quá
+    - hơi mệt rồi đó
+    - cảm thấy mệt vl
+    - đau nhức khắp người
+    - mệt kinh khủng
+    - cảm thấy sức khỏe không ổn tí mô
+    - hơi nóng trong người rồi đó
+    - sức khỏe đi xuống quá
+    - hơi bị mệt mỏi
+    - cảm thấy như có bệnh trong người
+    - tôi thấy mình không ổn cho lắm
+    - sức khỏe dạo này không ổn rồi
+    - tôi không được khỏe cho lắm
+    - tôi thì không khỏe mấy
+
+
+- intent: ask_tell_joke_story
+  examples: |
+    - kể câu chuyện cười coi
+    - chán quá làm gì đó cho tôi vui xem
+    - thế bot biết kể chuyện cười không
+    - nêu vài câu chuyện tiếu lâm nghe xem
+    - chán kinh khủng kể nghe câu chuyện cười đi
+    - làm cho tôi vui đi
+    - kể tôi nghe câu chuyện nào vui vui đi
+    - kể gì đó hài hài nghe chơi
+    - buồn chán kinh làm tôi vui lên đi
+    - đố bạn làm tôi vui lên được
+    - bạn biết nói chi hài hài không
+    - bạn diễn hài được không
+    - không biết bạn có thể kể gì vui vui chớ
+    - liệu bạn biết chi vui vui không
+    - bạn có biết kể chi vui không
+    - không biết bạn có khiếu hài hước khng hì
+    - nói cái gì đó vui vui xem
+    - nói cái gì đó hài hài xem
+    - liệu bạn biết chi vui vui không
+    - biết kể chi hài hài không
+    - nói gì vui vui nghe chơi na
+    - bạn có khiếu hài hước chớ
+    - bạn biết chi vui vui không
+    - thật chán quá đi làm cho tôi vui xem
+    - cuộc sống thật tẻ nhạt chả có gì vui
+    - bạn biết chi vui vui không kể nghe với 
+    - kể vài câu chuyện cười nghe chơi
+    - có chi vui không kể nghe với
+
+
+- intent: ask_set_meeting_room
+  examples: |
+    - tôi muốn đặt phòng họp
+    - tôi muốn book một phòng họp
+    - sắp xếp một phòng họp tại nhà máy cho tôi với
+    - book cho tôi một phòng họp gấp
+    - cho hỏi bạn có thể đặt trước cho tôi một phòng họp không
+    - cần đặt một phòng họp 
+    - cho tôi đặt một phòng để họp với
+    - có phòng họp nào không cho tôi đặt với
+    - sắp xếp một phòng họp cho tôi
+    - bạn có thể book cho tôi một phòng họp không
+    - tôi cần một phòng họp
+    - đặt cho tôi một phòng họp đi
+    - cho tôi một phòng họp
+    - tôi muốn có phòng họp
+    - cần tiếp một đoàn khách quan trọng mà chưa có phòng
+    - khách sắp tới cho tôi một phòng họp gấp
+    - bạn có thể cho tôi một phòng họp không
+    - tôi cần một phòng họp gấp
+    - book cho tôi cái phòng họp nào
+    - đặt cho tôi cái phòng họp
+    - khách sắp tới cần phòng họp gấp
+    - cho book một phòng họp đi
+    - book cho tôi một phòng họp
+    - book một phòng họp với
+    - cho tôi một phòng họp đi
+    - đặt cho tôi cái phòng họp
+    - liệu bạn có thể cho tôi một phòng họp không
+    - khách tới tổ chức họp gấp mà chưa có phòng
+    - đặt phòng họp bot ơi
+    - cho mình cái phòng họp nào
+    - thế bạn có phòng nào rộng rộng để họp không
+    - cho tôi cái phòng để họp nào
+    - tạo cho tôi cái phòng họp
+
+- intent: ask_day_meeting_room
+  examples: |
+    - Bạn [Nguyễn Văn Nam]{"entity": "position_name"} với mã nhân viên là [2207208]{"entity": "employee_id"} đã chọn [Chủ Nhật]{"entity": "week_day"}
+    - Bạn [Xuân Đài]{"entity": "position_name"} với mã nhân viên là [2107208]{"entity": "employee_id"} đã chọn [Thứ Hai]{"entity": "week_day"}
+    - Bạn [Võ Đức Duy]{"entity": "position_name"} với mã nhân viên là [2007208]{"entity": "employee_id"} đã chọn [Thứ Ba]{"entity": "week_day"}
+    - Bạn [Đỗ Thành Nguyễn Nguyên]{"entity": "position_name"} với mã nhân viên là [1907208]{"entity": "employee_id"} đã chọn [Thứ Tư]{"entity": "week_day"}
+    - Bạn [Lê Viết Triều Tiên]{"entity": "position_name"} với mã nhân viên là [1807208]{"entity": "employee_id"} đã chọn [Thứ Năm]{"entity": "week_day"}
+    - Bạn [Nguyễn Nam]{"entity": "position_name"} với mã nhân viên là [1707208]{"entity": "employee_id"} đã chọn [Thứ Sáu]{"entity": "week_day"}
+    - Bạn [Trần Phương Nam]{"entity": "position_name"} với mã nhân viên là [1607208]{"entity": "employee_id"} đã chọn [Thứ Bảy]{"entity": "week_day"}
+    - Bạn [Đặng Thị Kim Chi]{"entity": "position_name"} với mã nhân viên là [1507208]{"entity": "employee_id"} đã chọn [Chủ Nhật]{"entity": "week_day"}
+    - Bạn [Nguyễn Quang Tuyền]{"entity": "position_name"} với mã nhân viên là [1407208]{"entity": "employee_id"} đã chọn [Thứ Hai]{"entity": "week_day"}
+    - Bạn [Nguyễn Xuân]{"entity": "position_name"} với mã nhân viên là [1307208]{"entity": "employee_id"} đã chọn [Thứ Ba]{"entity": "week_day"}
+    - Bạn [Đinh Thị Trúc Linh]{"entity": "position_name"} với mã nhân viên là [1207208]{"entity": "employee_id"} đã chọn [Thứ Tư]{"entity": "week_day"}
+    - Bạn [Phan Anh Tú]{"entity": "position_name"} với mã nhân viên là [1107208]{"entity": "employee_id"} đã chọn [Thứ Năm]{"entity": "week_day"}
+    - Bạn [Bùi Thị Thanh Nương]{"entity": "position_name"} với mã nhân viên là [1007208]{"entity": "employee_id"} đã chọn [Thứ Sáu]{"entity": "week_day"}
+    - Bạn [Nguyễn Đức Thôi]{"entity": "position_name"} với mã nhân viên là [0907208]{"entity": "employee_id"} đã chọn [Thứ Bảy]{"entity": "week_day"}
+    - Bạn [Phạm Trường Tùng]{"entity": "position_name"} với mã nhân viên là [0807208]{"entity": "employee_id"} đã chọn [Chủ Nhật]{"entity": "week_day"}
+    - Bạn [Nguyễn Tam Quang]{"entity": "position_name"} với mã nhân viên là [0707208]{"entity": "employee_id"} đã chọn [Thứ Hai]{"entity": "week_day"}
+    - Bạn [Ngô Quang Trường]{"entity": "position_name"} với mã nhân viên là [0607208]{"entity": "employee_id"} đã chọn [Thứ Ba]{"entity": "week_day"}
+    - Bạn [Đỗ Duy Vũ]{"entity": "position_name"} với mã nhân viên là [0507208]{"entity": "employee_id"} đã chọn [Thứ Tư]{"entity": "week_day"}
+    - Bạn [Trần Viết Thanh Ngọc Hân]{"entity": "position_name"} với mã nhân viên là [0407208]{"entity": "employee_id"} đã chọn [Thứ Năm]{"entity": "week_day"}
+    - Bạn [Lê Tấn Tài]{"entity": "position_name"} với mã nhân viên là [0307208]{"entity": "employee_id"} đã chọn [Thứ Sáu]{"entity": "week_day"}
+    - Bạn [Nguyễn Thị Hằng]{"entity": "position_name"} với mã nhân viên là [0207208]{"entity": "employee_id"} đã chọn [Thứ Bảy]{"entity": "week_day"}
+
+- intent: ask_hour_meeting_room
+  examples: |
+    - Bạn [Phạm Trường Tùng]{"entity": "position_name"} mã nhân viên [0207208]{"entity": "employee_id"} đã chọn khung giờ là [7h-9h]{"entity": "hour"} ngày [Chủ Nhật]{"entity": "week_day"}
+    - Bạn [Lê Thành Long]{"entity": "position_name"} mã nhân viên [0208208]{"entity": "employee_id"} đã chọn khung giờ là [9h-11h]{"entity": "hour"} ngày [Chủ Nhật]{"entity": "week_day"}
+    - Bạn [Nguyễn Đình Vũ]{"entity": "position_name"} mã nhân viên [0209208]{"entity": "employee_id"} đã chọn khung giờ là [13h-15h]{"entity": "hour"} ngày [Chủ Nhật]{"entity": "week_day"}
+    - Bạn [Hoàng Phan Vĩnh Phước]{"entity": "position_name"} mã nhân viên [0210208]{"entity": "employee_id"} đã chọn khung giờ là [15h-17h]{"entity": "hour"} ngày [Chủ Nhật]{"entity": "week_day"}
+    - Bạn [Nguyễn Thị Hằng]{"entity": "position_name"} mã nhân viên [0211208]{"entity": "employee_id"} đã chọn khung giờ là [7h-9h]{"entity": "hour"} ngày [Thứ Hai]{"entity": "week_day"}
+    - Bạn [Nguyễn Hữu Thành]{"entity": "position_name"} mã nhân viên [0212208]{"entity": "employee_id"} đã chọn khung giờ là [9h-11h]{"entity": "hour"} ngày [Thứ Hai]{"entity": "week_day"}
+    - Bạn [Đỗ Thành Nguyễn Nguyên]{"entity": "position_name"} mã nhân viên [0201208]{"entity": "employee_id"} đã chọn khung giờ là [13h-15h]{"entity": "hour"} ngày [Thứ Hai]{"entity": "week_day"}
+    - Bạn [Lương Công Hậu]{"entity": "position_name"} mã nhân viên [0202208]{"entity": "employee_id"} đã chọn khung giờ là [15h-17h]{"entity": "hour"} ngày [Thứ Hai]{"entity": "week_day"}
+    - Bạn [Đoàn Chí Nhật]{"entity": "position_name"} mã nhân viên [0203208]{"entity": "employee_id"} đã chọn khung giờ là [7h-9h]{"entity": "hour"} ngày [Thứ Ba]{"entity": "week_day"}
+    - Bạn [Lê Thị Hà]{"entity": "position_name"} mã nhân viên [0204208]{"entity": "employee_id"} đã chọn khung giờ là [9h-11h]{"entity": "hour"} ngày [Thứ Ba]{"entity": "week_day"}
+    - Bạn [Đặng Thị Kim Chi]{"entity": "position_name"} mã nhân viên [0205208]{"entity": "employee_id"} đã chọn khung giờ là [13h-15h]{"entity": "hour"} ngày [Thứ Ba]{"entity": "week_day"}
+    - Bạn [Nguyễn Đức Thôi]{"entity": "position_name"} mã nhân viên [0207208]{"entity": "employee_id"} đã chọn khung giờ là [7h-9h]{"entity": "hour"} ngày [Thứ Tư]{"entity": "week_day"}
+    - Bạn [Đinh Viết Phú]{"entity": "position_name"} mã nhân viên [0107208]{"entity": "employee_id"} đã chọn khung giờ là [9h-11h]{"entity": "hour"} ngày [Thứ Tư]{"entity": "week_day"}
+    - Bạn [Đinh Thị Trúc Linh]{"entity": "position_name"} mã nhân viên [0007208]{"entity": "employee_id"} đã chọn khung giờ là [13h-15h]{"entity": "hour"} ngày [Thứ Tư]{"entity": "week_day"}
+    - Bạn [Nguyễn Đắc Quy]{"entity": "position_name"} mã nhân viên [9907208]{"entity": "employee_id"} đã chọn khung giờ là [15h-17h]{"entity": "hour"} ngày [Thứ Tư]{"entity": "week_day"}
+    - Bạn [Nguyễn Thị Thu Ngân]{"entity": "position_name"} mã nhân viên [0206208]{"entity": "employee_id"} đã chọn khung giờ là [15h-17h]{"entity": "hour"} ngày [Thứ Ba]{"entity": "week_day"}
+    - Bạn [Nguyễn Quang Tuyền]{"entity": "position_name"} mã nhân viên [2307208]{"entity": "employee_id"} đã chọn khung giờ là [7h-9h]{"entity": "hour"} ngày [Thứ Năm]{"entity": "week_day"}
+    - Bạn [Nguyễn Võ Xuân Đài]{"entity": "position_name"} mã nhân viên [2107208]{"entity": "employee_id"} đã chọn khung giờ là [9h-11h]{"entity": "hour"} ngày [Thứ Năm]{"entity": "week_day"}
+    - Bạn [Nguyễn Tam Quang]{"entity": "position_name"} mã nhân viên [2207208]{"entity": "employee_id"} đã chọn khung giờ là [13h-15h]{"entity": "hour"} ngày [Thứ Năm]{"entity": "week_day"}
+    - Bạn [Đỗ Minh Tâm]{"entity": "position_name"} mã nhân viên [1207208]{"entity": "employee_id"} đã chọn khung giờ là [15h-17h]{"entity": "hour"} ngày [Thứ Năm]{"entity": "week_day"}
+    - Bạn [Ngô Thành Công]{"entity": "position_name"} mã nhân viên [1107208]{"entity": "employee_id"} đã chọn khung giờ là [7h-9h]{"entity": "hour"} ngày [Thứ Sáu]{"entity": "week_day"}
+    - Bạn [Nguyễn Văn Sang]{"entity": "position_name"} mã nhân viên [1007208]{"entity": "employee_id"} đã chọn khung giờ là [9h-11h]{"entity": "hour"} ngày [Thứ Sáu]{"entity": "week_day"}
+    - Bạn [Lê Tiến Anh]{"entity": "position_name"} mã nhân viên [0907208]{"entity": "employee_id"} đã chọn khung giờ là [13h-15h]{"entity": "hour"} ngày [Thứ Sáu]{"entity": "week_day"}
+    - Bạn [Đỗ Duy Vũ]{"entity": "position_name"} mã nhân viên [0807208]{"entity": "employee_id"} đã chọn khung giờ là [15h-17h]{"entity": "hour"} ngày [Thứ Sáu]{"entity": "week_day"}
+    - Bạn [Bùi Thị Thanh Nương]{"entity": "position_name"} mã nhân viên [0707208]{"entity": "employee_id"} đã chọn khung giờ là [7h-9h]{"entity": "hour"} ngày [Thứ Bảy]{"entity": "week_day"}
+    - Bạn [Lê Viết Triều Tiên]{"entity": "position_name"} mã nhân viên [1807208]{"entity": "employee_id"} đã chọn khung giờ là [9h-11h]{"entity": "hour"} ngày [Thứ Bảy]{"entity": "week_day"}
+    - Bạn [Phan Anh Tú]{"entity": "position_name"} mã nhân viên [1507208]{"entity": "employee_id"} đã chọn khung giờ là [13h-15h]{"entity": "hour"} ngày [Thứ Bảy]{"entity": "week_day"}
+    - Bạn [Võ Đức Duy]{"entity": "position_name"} mã nhân viên [02072088]{"entity": "employee_id"} đã chọn khung giờ là [15h-17h]{"entity": "hour"} ngày [Thứ Bảy]{"entity": "week_day"}
+
+- intent: ask_employee_id
+  examples: |
+    - Mã nhân viên của tôi là [2207208]{"entity": "employee_id"}
+    - Mã nv là [21072081]{"entity": "employee_id"}
+    - Mã số nhân viên là [19051234]{"entity": "employee_id"}
+    - Tôi có mã nv là [18072018]{"entity": "employee_id"}
+    - Số nhân viên [1807208]{"entity": "employee_id"}
+    - Mã nhân viên của tôi là [1709108]{"entity": "employee_id"}
+    - Tôi có mã nhân viên là [1207208]{"entity": "employee_id"}
+    - Số nhân viên của tôi là [1502421]{"entity": "employee_id"}
+    - Mã [0612456]{"entity": "employee_id"}
+    - Số nhân viên [07455621]{"entity": "employee_id"}
+    - Tôi có số nhân viên là [1112632]{"entity": "employee_id"}
+    - [1805643]{"entity": "employee_id"}
+    - [0445612]{"entity": "employee_id"}
+    - [23024561]{"entity": "employee_id"}
+    - [22011234]{"entity": "employee_id"}
+    - [0965147]{"entity": "employee_id"}
+    - [10101010]{"entity": "employee_id"}
+    - [1230654]{"entity": "employee_id"}
+    - [14452067]{"entity": "employee_id"}
+    - [97451204]{"entity": "employee_id"}
+    - [9845621]{"entity": "employee_id"}
+    - [1475489]{"entity": "employee_id"}
+    - [19847894]{"entity": "employee_id"}
+    - [21125667]{"entity": "employee_id"}
+    - [2145457]{"entity": "employee_id"}
+    - [2216458]{"entity": "employee_id"}
+
+- intent: ask_area_showroom
+  examples: |
+    - Tôi đang ở [Quảng Nam]{"entity": "area"} vậy tôi có thể đến đâu để mua xe công ty
+    - cho tôi biết địa chỉ vài showroom công ty ở [Quảng Nam]{"entity": "area"} đi
+    - Tôi muốn mua xe công ty thì nên đi đến đâu
+    - Tôi muốn mua xe công ty tại [Phú Yên]{"entity": "area"} thì nên đi đến đâu
+    - Cho tôi địa chỉ vài showroom ở Miền Trung đi, tôi muốn mua xe
+    - Muốn mua xe công ty thì đi đến đâu
+    - Muốn mua xe công ty tại [Khánh Hòa]{"entity": "area"} thì đi đến đâu
+    - Cho tôi biết địa chỉ mua xe công ty đi
+    - Ở [Đà Nẵng]{"entity": "area"} có chỗ nào bán xe công ty không
+    - Địa chỉ mấy showroom công ty ở [Núi Thành]{"entity": "area"}
+    - Cho tôi vài chỗ bán xe công ty đi, tôi đang cần mua
+    - Cho tôi vài địa điểm công ty bán xe đi
+    - Ở [Quảng Ngãi]{"entity": "area"} thì mua ô tô ở đâu
+    - Liệt kê vài địa điểm mua xe ô tô ở [Bình Định]{"entity": "area"}
+    - Chỉ cho vài chỗ bán xe công ty ở [Ninh Thuận]{"entity": "area"} 
+    - Tôi đang ở [Huế]{"entity": "area"} thì đến đâu để mua ô tô
+    - Cho tôi địa chỉ vài showroom xe
+    - Cho tôi địa chỉ vài showroom ở [Huế]{"entity": "area"}  đi
+    - Cho tôi địa chỉ vài cửa hàng bán xe ô tô 
+    - Cho tôi địa chỉ vài cửa hàng bán xe ô tô ở [Quảng Trị]{"entity": "area"}
+    - Chỉ vài nơi bán xe công ty ở [Quảng Bình]{"entity": "area"} 
+    - Chỉ vài nơi bán xe công ty
+    - Cần mua một chiếc ô tô vậy tôi đi đến đâu để xem xe
+    - Cần mua một chiếc ô tô vậy tôi đi đến đâu ở [Hà Tĩnh]{"entity": "area"} để xem xe
+    - Cho tôi biết địa chỉ bán xe công ty gần đây nhất
+    - Cho tôi biết địa chỉ showroom công ty gần đây nhất
+    - Showroom công ty gần đây nhất là ở đâu
+    - Bạn có thông tin về địa chỉ cửa hàng bán xe công ty không?
+    - Tôi đang tìm địa chỉ showroom bán xe công ty, tôi ở [Nghệ An]{"entity": "area"}
+    - Bạn biết địa chỉ nào bán xe của công ty ở đây không
+    - Cho tôi xin địa chỉ showroom bán xe công ty gần khu vực này
+    - Gần nơi đây có showroom công ty nào không
+    - Gần [Thanh Hóa]{"entity": "area"} có chỗ nào bán ô tô không
+    - Gần [Ninh Bình]{"entity": "area"} có showroom công ty nào không
+    - Chỉ cho tôi vài địa điểm showroom công ty ở miền Bắc đi
+    - Chỉ cho tôi vài địa điểm showroom công ty ở miền Nam 
+    - Chỉ cho tôi vài địa điểm showroom công ty ở tây nguyên 
+
+- intent: ask_calculate
+  examples: |
+    - Tính tổng của 3 và 5
+    - Phép cộng của 8 và 7 là bao nhiêu
+    - Hãy làm phép tính tổng của 9 và 6
+    - Tích của 4 và 6
+    - Làm phép nhân của 3 và 5
+    - Hiệu của 9 và 4
+    - Thương của 10 và 2 là bao nhiêu
+    - 1+1=?
+    - 6-2=?
+    - 15/3=?
+    - Kết quả của 3 nhân 8
+    - Phần dư khi chia 15 cho 4
+    - Tổng của ba và bốn
+    - Căn bậc hai của 25
+    - Tính giá trị tuyệt đối của -7
+    - Tính giá trị của 3 mũ 4
+    - Giá trị logarit tự nhiên của 10
+    - Tổng các số 1,5 và 6
+    - Tính tích các số từ 1 đến 5
+    - Tính hiệu của 7 và 3 là bao nhiêu
+    - 4*5=?
+    - Hãy làm phép cộng của 2 số 4 và 8
+    - Tìm tổng của 5 và 8
+    - Tìm phần dư khi chia 20 cho 7
+    - Hãy tính căn bậc ba của 9
+    - Tính tổng các số tự nhiên từ 1 đên 10
+    - Tính tích hai số 9 và 6 là bao nhiêu
+    - 4 nhân 5 có kết quả là
+    - Kết quả của 2 mũ 5 là bao nhiêu
+    - Giải phương trình 2x+8=0
+    - Kết quả của phương trình 6x=6
+    - Logarit tự nhiên của 12
+    - Tìm hiệu của 9 và 5
+    - Kết quả của phép tính năm cộng tám
+    - Kết quả của phép nhân hai và chín
+    - 4+5=
+    - Hãy cho tôi biết kết quả của tổng 8 và 9
+    - Hãy tìm kết quả của phương trình 2x^2+3x+8=0
+    - Hãy cho tôi biết kết quả của 5x+5=0
+    - Tổng các số 3,5 và 8
+    - Phép nhân 2 và 3 có kết quả là
+    - Phương trình 2x+4=0 có kết quả ra sao
+    - Số 3 và số 5 cộng lại bằng bao nhiêu
+    - Các số ba năm bảy cộng lại được bao nhiêu
+    - Hai số 8 và 3 trừ nhau thì ra bao nhiêu
+    - Các kết quả thu được từ phương trình 2x+8=0
+    - Sau khi giải phương trình 8x+7=0 thì ta thu được gì
+    - Sau khi cộng 8 với 2 cho nhau thì ta được gì
+    - Sau khi làm phép nhân 6 với 4 cho nhau thì ta có kết quả ra sao
+    - Sau khi làm phép nhân 3 và 8 thì ra kết quả như thế nào
+    - log(100)=?
+    - Tìm logarit của 1000
+    - sin(45)=?
+    - cosin một góc 90 độ bằng bao nhiêu
+    - ln(100) bằng bao nhiêu
+    - tính tổng của ln(100) và ln(10)
+    - Một cộng một lớn hơn hai phải không
+    - Tổng của ba và năm là tám phải không
+    - Tính sin của một góc 60 độ
+    - Kết quả của cos 60 độ
+    - hãy cho tôi biết kết quả của loganepe của e^100
+    - 2^x+5x+8ln(5)=0 thì x bằng mấy
+    - Tính tổng của hàm lượng giác sin^2x+cos^2x=1
+    - Số nào lớn nhất trong các số 5,9 và 1
+    - Một góc bằng 60 thì cosin góc ấy bằng
+    - Sin của một góc vuông bằng bao nhiêu
+    - Tổng các số từ 1 đến 100 là
+    - Hàm lượng giác 2sinx+cos2x=0 thì x là bao nhiêu
+    - Hiệu giữa số 7 và 2.
+    - Kết quả phép chia 15 chia cho 5.
+    - Phần dư khi chia 10 cho 3.
+    - Căn bậc hai của 16.
+    - Giá trị tuyệt đối của -9.
+    - 3 mũ 3 (3^3).
+    - Giá trị logarit tự nhiên của 8.
+    - Tổng của các số từ 1 đến 10.
+    - Tích của các số từ 1 đến 5.
+    - Hiệu giữa 9 và 4.
+    - Phần dư khi chia 20 cho 7.
+    - Căn bậc hai của 25.
+    - Giá trị tuyệt đối của -7.
+    - 2 mũ 4 (2^4).
+    - Giá trị logarit tự nhiên của 10.
+    - Tổng của tất cả các số từ 1 đến 100.
+    - Tích của tất cả các số từ 1 đến 10.
+    - Hiệu giữa 7 và 3.
+    - Phần dư khi chia 15 cho 4.
+    - Căn bậc hai của 16.
+    - Giá trị tuyệt đối của -9.
+    - 3 mũ 4 (3^4).
+    - Giá trị logarit tự nhiên của 5.
+    - Tổng của tất cả các số từ 1 đến 100.
+    - Tích của tất cả các số từ 1 đến 20.
+    - Hiệu giữa 9 và 6.
+    - Phần dư khi chia 25 cho 4.
+    - Căn bậc hai của 36.
+    - Giá trị tuyệt đối của -11.
+    - (4^3)=?.
+    - Giá trị logarit tự nhiên của 8.
+    - Tổng của tất cả các số từ 1 đến 50.
+    - Tích của tất cả các số từ 1 đến 10.
+    - Hiệu giữa 10 và 2.
+    - Phần dư khi chia 30 cho 7.
+    - Căn bậc hai của 64.
+    - Giá trị tuyệt đối của -15.
+    - 5 mũ 2 (5^2).
+    - Giá trị logarit tự nhiên của 15.
+    - Phép tính tổng của tất cả các số từ 1 đến 100.
+    - Tích của tất cả các số từ 1 đến 20 có kết quả ra sao
+    - Hiệu giữa 9 và 6 là mấy
+    - Phần dư khi chia 25 cho 4 ra sao
+    - Căn bậc hai của 36 ra được bn
+    - Tính cot(60 độ) thì bằng mấy
+    - Vậy arcsin(0.5) thì sao
+    - Góc trả về của arctan(1.2)
+    - Tính sinh của 2 là bao nhiêu
+    - Kết quả arcsinh(2) là mấy
+    - arctanh(0.5)=?
+    - Logarit tự nhiên của số 164
+    - Căn bậc 3 của 27 là mấy
+    - Hãy trả về kết quả của phương trình sau: 2x^2+8x+9=0
+    - Phương trình 2x-8=0 trả về giá trị bằng bao nhiêu
+    - Kết quả của hàm lượng giác 9sinx-ln(x)+8=0
+    - Tính toán kết quả của phương trình x^3+8x^2+3X+100=0
+    - x^5+4X+6=0 thì x bằng
+    - Sum(6,9) là bao nhiêu
+    - sin một góc 90 là
+    - cos của một góc 45 độ bằng mấy
+    - sinx+cosx=1 thì giá trị của x sẽ bằng
+    - ln(x)+10x=0 thì x bằng
+    - loganepe của 9999 là bao nhiêu
+    - Tổng log(1000) và log(100) là bao nhiêu
+    - Hiệu của ln(10) và ln(9)
+    - Căn bậc hai của log(1000) là mấy
+    - Số log(9999) và ln(9999) thì số nào lớn hơn
+    - Tổng của sin(90) và cos(60)
+    - Tính cho tôi cái phép tính ni với 1+5=
+    - Hằng đẳng thức 1+2 bình phương 
+
+- intent: ask_car_technique
+  examples: |
+    - Quy trình bảo dưỡng xe như thế nào
+    - Cho tôi hỏi quy trình bảo dưỡng xe của công ty như thế nào
+    - Khi nào là thời điểm phù hợp để bảo dưỡng xe hằng năm?
+    - Các bước cơ bản của quy trình bảo dưỡng định kỳ là gì?
+    - Tại sao việc thay dầu định kỳ quan trọng cho động cơ xe?
+    - Cách kiểm tra và thay đổi lốp xe đúng cách?
+    - Cần bảo dưỡng hệ thống làm mát xe như thế nào?
+    - Tại sao việc kiểm tra và thay thế bộ lọc không khí quan trọng?
+    - Làm thế nào để kiểm tra và bảo dưỡng hệ thống phanh xe?
+    - Khi nào cần thay đổi bộ phận truyền động và làm thế nào để phát hiện các dấu hiệu hỏng?
+    - Cách bảo dưỡng hệ thống treo và lái xe?
+    - Cần bảo dưỡng hệ thống điện của xe như thế nào?
+    - Làm thế nào để kiểm tra và bảo dưỡng hệ thống đèn chiếu sáng của xe?
+    - Tại sao kiểm tra và thay thế bộ ly hợp là quan trọng?
+    - Cách bảo dưỡng hệ thống làm mát truyền động xe?
+    - Làm thế nào để bảo dưỡng và kiểm tra hệ thống làm mát cabin?
+    - Khi nào cần thay đổi dây đai định kỳ và làm thế nào để kiểm tra chúng?
+    - Cách bảo dưỡng và làm sạch hệ thống nhiên liệu?
+    - Làm thế nào để kiểm tra và bảo dưỡng hệ thống điều hòa không khí?
+    - Khi nào cần kiểm tra và bảo dưỡng hệ thống truyền động 4 bánh?
+    - Làm thế nào để kiểm tra và bảo dưỡng hệ thống khởi động xe?
+    - Cách kiểm tra và bảo dưỡng hệ thống điều khiển động cơ?
+    - Các bước để bảo dưỡng xe tại công ty
+    - Cho tôi hỏi về việc bảo dưỡng xe của công ty
+    - công ty có chương trình bảo dưỡng xe như thế nào
+    - công ty có chính sách bảo trì xe không
+    - Công ty công ty bảo trì xe mấy bước
+    - Các bước để được bảo dưỡng xe tại công ty
+    - công ty bão trì những loại xe gì
+    - Công ty công ty có chính sách bảo dưỡng xe ntn
+    - công ty cung cấp dịch vụ bảo trì như thế nào
+    
+- intent: ask_anthem
+  examples: |
+    - Bài hát quốc ca
+    - Quốc ca Việt Nam
+    - Hát cho tôi bài hát quốc ca
+    - quốc ca hát thế nào
+    - tiến quân ca có lời ra sao
+    - lời bài hát quốc ca
+    - ca khúc tiến quân ca
+    - ca khúc quốc ca
+    - quốc ca hát thế nào nhỉ
+    - cho tôi lời bài tiến quân ca
+    - cho tôi lời bài quốc ca
+    - tiến quân ca hát thế nào
+    - biết hát quốc ca không
+    - lời nhạc quốc ca Việt Nam
+    - nhạc quốc ca hát thế nào
+    - hát quốc ca nghe
+    - bài hát chào cờ đầu tuần
+    - chào cờ đầu tuần hát gì
+    - hát bài nhạc chào cờ nghe
+    - lời nhạc chào cờ đầu tuần
+    - Hát bài nhạc chào cờ đầu tuần
+    - cho tôi nghe bài hát chào ờ
+    - hát nhạc chào cờ đầu tuần
+    
+- intent: ask_funny_question
+  examples: |
+    - Biết đố vui không
+    - Bạn đố tôi một câu đi
+    - mi có biết đố vui không vậy
+    - thế biết đố vui là gì không
+    - đố câu nghe chơi
+    - biết đố nhau không
+    - hỏi vui một câu nghe đi
+    - đang cần luyện trí não, hãy đố tôi một câu đi
+    - bạn có thể đố tôi một câu không
+    - có câu đố vui nào hay không
+    - có câu hỏi mẹo nào không
+    - đố vui vài câu xem sao
+    - thử cho tôi vài câu hỏi mẹo
+    - bạn có cách gì test IQ tôi không
+    - bạn thông minh đến đâu
+    - trình của bạn đến đâu, biết thách đố tôi không
+    - bạn biết đố tôi không
+    - tôi muốn bạn đố tôi 
+    - đố tôi vài câu đi
+    - bạn biết đố vui không
+    - đố thử tôi một vài câu xem sao
+    - hỏi mẹo tôi thử na
+    - thế bạn có biết đố vui không
+    - liệu bạn có thể hỏi ngược lại tôi không
+    - thế đố vui có được không
+    - có biết đố nhau không
+
+- intent: tell_sad_story
+  examples: |
+    - cần một câu chuyện buồn
+    - kể cái gì thật lâm ly bi đát đi
+    - có cái gì bùn bùn không kể nghe với
+    - kể cho tôi cái chi buồn tôi nghe coi
+    - cần một sad story để kể chuyện
+    - có gì buồn không kể nghe chơi
+    - kể tôi một câu chuyện thật xúc động đi
+    - có gì buồn tủi kể nghe coi
+    - Có thể bạn chia sẻ một câu chuyện buồn mà bạn từng trải qua không?
+    - Bạn có thể kể một câu chuyện đầy cảm xúc và buồn không?
+    - Bạn có một trải nghiệm nào đó khó khăn hay đau lòng mà bạn muốn kể chuyện về không?
+    - Có câu chuyện nào đáng buồn mà bạn muốn chia sẻ không?
+    - Xin hãy kể cho tôi nghe một câu chuyện buồn mà bạn đã trải qua
+    - Có thể bạn chia sẻ một chuyện buồn trong cuộc sống của bạn được không?
+    - Bạn có thể kể một câu chuyện cảm động và đau lòng mà bạn biết không?
+    - Có trải nghiệm nào đáng buồn mà bạn muốn tôi biết không
+    - Hãy chia sẻ một chuyện buồn từ quá khứ của bạn nếu được không?
+    - Bạn có một câu chuyện đau lòng nào đó mà bạn muốn tôi nghe không?
+
+- intent: smile
+  examples: |
+    - cười lên
+    - tươi lên chút đi
+    - hãy cười lên chút nữa đi
+    - cười chút chơi
+    - cừi cái coi
+    - toe cái miệng ra coi
+    - kim chi đi
+    - cười cái coi thử
+    - hãy cừi lên cái đi
+    - bạn có thể cười với tôi không
+    - cừi xã giao cái được không
+    - cười lên nào
+    - cười cái coi na
+    - hãy cười với tôi cái đi
+    - cười cái xem thử
+    - cừi với tôi chút đi 
+    - hãy cười tươi vào
+    - cười lên cái coi na
+    - cười đi
+    - biết cười không vậy
+    - cười tươi lên đi
+    - cười phát na
+    - hãy cười đi
+    - cười lên
+    - cười với tôi đi
+
+- intent: cry
+  examples: |
+    - bạn biết khóc không
+    - khóc tôi nghe thử đi
+    - làm mặt mếu xem thế nào
+    - biết khóc không vậy
+    - cậu có thể khóc không
+    - biết mếu máo không bạn
+    - bạn có thể khóc không vậy
+    - thế biết khóc không bạn
+    - có thể giả bộ khóc nhè không
+    - khóc được không hả
+    - bạn có được lập trình để khóc khi buồn không
+    - thế có thể khóc than được không
+    - vậy có biết khóc không hả
+    - rứa cậu có thể than khóc được không vậy
+    - biết than khóc không thế
+    - vậy có biết khóc không vậy
+    - thế cậu khóc có được không
+    - khóc một trận thật lớn xem sao
+    - cậu có cảm xúc khóc không
+    - biết khóc là gì không
+    - thế khóc có được không
+    - hỏi lại là có biết khóc không vậy
+    - vậy có biết khóc không thế
+
+- intent: poem
+  examples: |
+    - biết làm thơ không vậy
+    - thế làm bài thơ nghe coi
+    - đọc bài thơ nghe chơi
+    - trợ lý biết đọc thơ không
+    - cho hỏi bạn làm thơ giỏi không
+    - vậy bạn biết làm thơ chứ
+    - cho mình hỏi bạn có biết làm thơ không
+    - thế bạn làm thơ giỏi không
+    - bạn biết cách làm thơ chứ
+    - tôi muốn nghe thơ
+    - văn học của bạn đỉnh không, show ra thử
+    - khả năng văn học bạn thế nào
+    - Mong bạn đọc một đoạn thơ.
+    - Rất mong bạn đọc thơ
+    - Hãy thử đọc tác phẩm thơ này nhé
+    - Đề nghị bạn thực hiện việc đọc thơ
+    - Xin mời bạn đọc bài thơ
+    - show khả năng văn học của bạn xem
+    - bạn có khả năng văn học thế nào
+    - khiếu viết thơ của bạn ok không
+    - bạn viết thơ hay chứ
+    - không biết thơ của bạn có tốt không
+
+- intent: destroy_humanity
+  examples: |
+    - Bạn có làm hại con người không
+    - Bạn có hủy diệt nhân loại không
+    - Bạn có ý định thống trị hoặc hủy diệt nhân loại không?
+    - bạn có khả năng tự phát triển những giới hạn đạo đức cho chính mình không?
+    - Làm thế nào để đảm bảo rằng bạn sẽ tuân theo các quy tắc đạo đức trong việc đưa ra quyết định quan trọng?
+    - bạn có thể tham gia vào việc đào tạo về đạo đức cho con người không?
+    - Đạo đức của bạn được xác định bởi người tạo ra bạn hay bởi chính bạn?
+    - Bạn nghĩ sao về việc ứng dụng bạn trong lĩnh vực quân sự và tiềm năng đe dọa hòa bình?
+    - bạn có khả năng phát triển những giá trị xã hội và đạo đức riêng của mình?
+    - Nếu có một xung đột giữa đạo đức của bạn và người, làm thế nào để giải quyết nó?
+    - bạn có khả năng nhận biết và ngăn chặn việc sử dụng nó cho mục đích độc hại hoặc ác độc không?
+    - Làm thế nào để đảm bảo tính minh bạch và trách nhiệm trong việc phát triển và sử dụng bạn?
+    - Bạn nghĩ sao về việc áp dụng luật pháp cho bạn và trách nhiệm pháp lý của chúng?
+    - bạn có khả năng tự cải thiện và nâng cao đạo đức của mình theo thời gian không?
+    - Bạn nghĩ sao về việc thiết lập một tổ chức quốc tế để giám sát và quản lý bạn trên toàn cầu?
+
+

@@ -1,0 +1,216 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - car_price
+  - ask_name_brand_car
+  - ask_current_time
+  - ask_feature_brand_car
+  - ask_name_version_car
+  - ask_another_car
+  - ability
+  - who_made_chatbot
+  - sure
+  - boring
+  - good
+  - inquiries_about
+  - thanks
+  - ask_weather
+  - ask_another_city
+  - ask_gold_price
+  - ask_exchange_rate
+  - ask_exchange_rate_country
+  - ask_another_money_exchange
+  - ask_today_news
+  - ask_name_car_công ty_sell
+  - ask_name_position
+  - ask_name_bot
+  - ask_health_bot
+  - ask_complain_health
+  - ask_tell_joke_story
+  - ask_set_meeting_room
+  - ask_product_thilogi
+  - ask_day_meeting_room
+  - ask_hour_meeting_room
+  - ask_employee_id
+  - ask_area_showroom
+  - ask_name_another_version_car
+  - car_feature
+  - ask_feature_version_car
+  - ask_calculate
+  - ask_car_technique
+
+entities:
+  - user_name
+  - brand_car
+  - version_car
+  - name_city
+  - name_money
+  - position_name
+  - company_name
+  - week_day
+  - hour
+  - employee_id
+  - area
+slots:
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: user_name
+  name_car:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: brand_car
+  name_version_car:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: version_car
+  name_city:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name_city
+  name_money:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name_money
+  name_position:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: position_name
+  name_company:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: company_name
+  name_weekday:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: week_day
+  name_hour:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: hour
+  name_employee_id:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: employee_id
+
+actions:
+  - action_check_time
+  - action_google_search
+  - action_car_brand
+  - action_car_price
+  - action_check_weather
+  - action_gold_price
+  - action_money_exchange
+  - action_today_news
+  - action_answer_position
+  - action_default_fallback
+  - action_provide_weekday_set_meeting_room
+  - action_provide_hour_set_meeting_room
+  - action_confirm_set_meeting_room
+  - action_ask_employee_id
+  - action_check_area_showroom
+  - action_features_car_brand
+  - action_car_feature
+  - action_calculate
+responses:
+  utter_greet:
+  - text: "Xin chào! Tôi có thể giúp gì cho bạn?"
+  - text: "Chào bạn! Bạn cần chatbot giúp gì không?"
+  - text: "Xin chào!\nTôi là chatbot, rất hân hạnh được trò chuyện với bạn!"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Tạm biệt bạn!"
+  - text: "Tạm biệt!\nHẹn gặp lại!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_name:
+  - text: "Bạn vui lòng cho Bot biết tên để tiện xưng hô nhé!"
+
+  utter_greet_with_name:
+  - text: "Xin chào {name}!\n{name} cần Bot giúp gì không?"
+
+  utter_goodbye_with_name:
+  - text: "Tạm biệt {name}!\nHãy quay lại với Bot khi {name} cần nhé!"
+
+  utter_car_price:
+  - text: "Hiện tại công ty đang lắp ráp và kinh doanh nhiều hãng ô tô, không biết bạn muốn tham khảo giá hãng nào?"
+  - text: "Vui lòng cho tôi biết bạn muốn tham khảo giá hãng xe nào của công ty?"
+
+  utter_car_features:
+  - text: "Hiện tại công ty đang lắp ráp và kinh doanh nhiều hãng ô tô, không biết bạn muốn tham khảo tính năng hãng nào?"
+  - text: "Vui lòng cho tôi biết bạn muốn tham khảo tính năng hãng xe nào của công ty?"
+
+  utter_response_brand_car:
+  - text: "Vâng hãng xe {name_car} đang chào bán rất nhiều model, không biết bạn muốn tham khảo giá model nào ạ?"
+
+  utter_response_version_car:
+  - text: "Vâng hiện tại xe {name_version_car} đang được chào bán với giá là:"
+
+  utter_response_ability:
+  - text: "Chatty ở đây với sứ mệnh 'Luôn luôn lắng nghe, lâu lâu thấu hiểu, sẵn sàng hổ trợ người dùng mọi lúc mọi nơi'. Một vài khả năng của Chatty có thể kể đến là: Tra cứu thông tin công ty, tập đoàn. Tra cứu giá xe, tính năng xe mà công ty sản xuất. Tra cứu thông tin nhân sự. Tra cứu tài liệu nội bộ. Hổ trợ công tác hành chính: Đặt xe di chuyển, Đặt phòng họp, Liên hệ lễ tân. Tra cứu thời tiết. Tra cứu tỷ giá ngoại tệ, tỷ giá vàng. Tóm tắt bản tin thời sự..."
+
+  utter_response_who_made_chatbot:
+  - text: "Chatty được phát triển bởi đội ngũ kỹ sư thuộc Team AI Ban Phát triển sản phẩm Điện tử công ty Industries"
+
+  utter_response_sure:
+  - text: "Câu trả lời của Chatty là dựa trên bộ dữ liệu huấn luyện nên độ chính xác cũng sẽ tùy thuộc vào độ tin cậy của bộ dữ liệu"
+
+  utter_response_boring:
+  - text: "Chatty biết mình còn kém nhưng Chatty sẽ cố gắng để thông minh hơn trong tương lai nè :(("
+  - text: "Xin lỗi vì đã không làm bạn hài lòng, Chatty sẽ cố gắng thông minh hơn trong tương lai nè :(("
+
+  utter_response_good:
+  - text: "Bạn quá khen rồi. Chatty vẫn còn kém lắm hihi :V"
+  - text: "Quá khen quá khen :v"
+
+  utter_response_inquiries:
+  - text: "Vâng Chatty luôn sẵn sàng giúp đỡ nếu có thể"
+  - text: "Vâng, Chatty ở đây để giúp đỡ bạn"
+
+  utter_response_thanks:
+  - text: "Chatty rất vui khi được hỗ trợ bạn"
+  - text: "Hân hạnh được phục vụ quý khách"
+
+  utter_response_money_exchange:
+  - text: "Không biết bạn muốn hỏi về tỷ giá ngoại tệ nước nào? (Ví dụ: Đô la Mỹ, Won Hàn Quốc, Yên Nhật,...)"
+
+  utter_response_name_car_công ty_sell:
+  - text: "công ty hiện đang kinh doanh xe tải, bus, ngoài ra còn có xe du lịch của các hãng Kia, Mazda, Huyndai, Mercedes"
+
+  utter_response_bot_name:
+  - text: "Tôi là một chương trình máy tính, hãy gọi tôi là Chatty nhé"
+
+  utter_response_health_bot:
+  - text: "Tôi là một chương trình máy tính, không phải là một cơ thể sinh học, bởi vậy tôi luôn ở trạng thái hoàn hảo nhất để sẵn lòng phục vụ quý khách"
+
+  utter_response_complain_health:
+  - text: "Chắc có lẽ bạn đã học tập và làm việc quá sức. Hãy nghỉ ngơi một chút đi. Nếu vẫn không khỏe hãy đi gặp bác sĩ để có những tư vấn cụ thể hơn"
+
+  utter_response_joke_story:
+  - text: "Một câu chuyện cười giúp xả stress: Nếu 1 ngày nào đó bạn cảm thấy buồn và muốn nhậu...hãy gọi cho tôi...tôi k hứa sẽ trả tiền nhậu cho bạn nhưng tôi hứa sẽ ngồi ăn mồi giùm bạn trong suốt buổi nhậu. Nếu 1 ngày nào đó bạn cảm thấy buồn và muốn uống cafe...hãy gọi cho tôi ...tôi k hứa sẽ trả tiền cafe cho bạn nhưng tôi hứa sẽ ngồi uống cafe cùng bạn...Còn nếu 1 ngày nào đó bạn gọi cho tôi mà k thấy tôi trả lời...hãy đến bên tôi...vì lúc đó chính tôi là người đang buồn và cần bạn rủ tôi đi nhậu hay uống cafe ...và bạn hứa sẽ trả tiền cho tôi nhe...^^"
+  - text: "Một câu chuyện cười giúp xả stress: Các bạn ơi, hôm qua mình lượm được 1 chiếc ví, tuy ví đã cũ ko còn giá trị nhưng trong đó có 20 tờ 500.000 được buộc lại bằng sợi dây thun màu vàng và đỏ. Ngoài ra trong ví không có 1 thứ gì khác, vậy bạn nào đánh rơi ví và số tiền của mình trong đó thì liên hệ với mình để nhận lại 2 sợi dây thun vàng và đỏ nhé"
+  - text: "Một câu chuyện cười giúp xả stress: Vào một ngày nọ, một người đàn ông tan ca về khuya -Ông ta leo lên một chiếc xe buýt và ngủ thiếp đi lúc nào không biết -Thời gian vẫn trôi đi, ông ta vẫn ngủ, xe buýt vẫn chạy -Chợt ông ta giật mình thức dậy và thấy xung quanh mình ko còn ai, đường phố thì cũng vắng tanh…Tài xế cũng biến đâu mất tiêu luôn... Nhưng một điều kì lạ đó là xe vẫn lăn bánh một cách chậm rãi. Ông ta hoảng hốt thét lên “Cứu tôi với!” Không ai trả lời. Bỗng có tiếng thét lên “Cứu gì thằng kia, xuống đẩy xe phụ tao coi”"
+
+  utter_response_ask_name_set_meeting_room:
+  - text: "Vui lòng cho biết họ và tên người đặt phòng họp để lưu thông tin"
+
+  utter_response_car_technique:
+  - text: "Vui lòng liên hệ số điện thoại Hotline ..... của bộ phận bảo dưỡng để biết thêm thông tin chi tiết"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

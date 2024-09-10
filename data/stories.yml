@@ -1,0 +1,160 @@
+version: "3.1"
+stories:
+  - story: Chào hỏi
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: goodbye
+    - action: utter_goodbye
+  - story: hỏi tính năng xe
+    steps:
+    - intent: car_feature
+    - action: utter_car_features
+    - intent: ask_feature_brand_car
+    - action: action_features_car_brand
+    - intent: ask_feature_version_car
+    - action: action_car_feature
+    - intent: ask_name_another_version_car
+    - action: action_car_feature
+    - intent: ask_another_car
+    - action: action_features_car_brand
+    - intent: ask_name_another_version_car
+    - action: action_car_feature
+    - intent: ask_feature_version_car
+    - action: action_car_feature
+    - intent: ask_another_car
+    - action: action_features_car_brand
+    - intent: ask_feature_version_car
+    - action: action_car_feature
+  - story: hỏi giờ
+    steps:
+    - intent: ask_current_time
+    - action: action_check_time
+  - story: hỏi tính năng xe
+    steps:
+    - intent: car_price
+    - action: utter_car_price
+    - intent: ask_name_brand_car
+    - action: action_car_brand
+    - intent: ask_name_version_car
+    - action: action_car_price
+    - intent: ask_name_another_version_car
+    - action: action_car_price
+    - intent: ask_another_car
+    - action: action_car_brand
+    - intent: ask_name_another_version_car
+    - action: action_car_price
+    - intent: ask_name_version_car
+    - action: action_car_price
+    - intent: ask_another_car
+    - action: action_car_brand
+    - intent: ask_name_version_car
+    - action: action_car_price
+  - story: hỏi thời tiết
+    steps:
+    - intent: ask_weather
+    - action: action_check_weather
+    - intent: ask_another_city
+    - action: action_check_weather
+    - intent: ask_another_city
+    - action: action_check_weather
+  - story: hỏi giá vàng
+    steps:
+    - intent: ask_gold_price
+    - action: action_gold_price
+  - story: hỏi khả năng
+    steps:
+    - intent: ability
+    - action: utter_response_ability
+  - story: hỏi người làm ra chatbot
+    steps:
+    - intent: who_made_chatbot
+    - action: utter_response_who_made_chatbot
+  - story: hỏi về độ tin cậy của chatbot
+    steps:
+    - intent: sure
+    - action: utter_response_sure
+  - story: phàn nàn về chatbot
+    steps:
+    - intent: boring
+    - action: utter_response_boring
+  - story: khen chatbot
+    steps:
+    - intent: good
+    - action: utter_response_good
+  - story: yêu cầu chatbot
+    steps:
+    - intent: inquiries_about
+    - action: utter_response_inquiries
+  - story: cảm ơn chatbot
+    steps:
+    - intent: thanks
+    - action: utter_response_thanks
+  - story: quy đổi tiền tệ
+    steps:
+    - intent: ask_exchange_rate
+    - action: utter_response_money_exchange
+    - intent: ask_exchange_rate_country
+    - action: action_money_exchange
+    - intent: ask_another_money_exchange
+    - action: action_money_exchange
+    - intent: ask_another_money_exchange
+    - action: action_money_exchange
+    - intent: ask_another_money_exchange
+    - action: action_money_exchange
+    - intent: ask_another_money_exchange
+    - action: action_money_exchange
+  - story: tin tức hôm nay
+    steps:
+    - intent: ask_today_news
+    - action: action_today_news
+  - story: hỏi tên bot
+    steps:
+    - intent: ask_name_bot
+    - action: utter_response_bot_name
+  - story: hỏi sức khỏe bot
+    steps:
+    - intent: ask_health_bot
+    - action: utter_response_health_bot
+  - story: than phiền về sức khỏe với bot
+    steps:
+    - intent: ask_complain_health
+    - action: utter_response_complain_health
+  - story: hỏi số lượng showroom xe
+    steps:
+    - intent: ask_number_showroom
+    - action: utter_response_number_showroom
+  - story: kể chuyện cười
+    steps:
+    - intent: ask_tell_joke_story
+    - action: utter_response_joke_story
+  - story: đặt phòng họp
+    steps:
+    - intent: ask_set_meeting_room
+    - action: utter_response_ask_name_set_meeting_room
+    - intent: ask_name_position
+    - action: action_ask_employee_id
+    - intent: ask_employee_id
+    - action: action_provide_weekday_set_meeting_room
+    - intent: ask_day_meeting_room
+    - action: action_provide_hour_set_meeting_room
+    - intent: ask_hour_meeting_room
+    - action: action_confirm_set_meeting_room
+  - story: hỏi địa chỉ showroom
+    steps:
+    - intent: ask_area_showroom
+    - action: action_check_area_showroom
+    - intent: ask_another_city
+    - action: action_check_area_showroom
+    - intent: ask_another_city
+    - action: action_check_area_showroom
+  - story: tính toán
+    steps:
+    - intent: ask_calculate
+    - action: action_calculate
+    - intent: ask_calculate
+    - action: action_calculate
+  - story: bảo dưỡng xe
+    steps:
+    - intent: ask_car_technique
+    - action: utter_response_car_technique
